@@ -1,5 +1,13 @@
-<html>
-<body>
-<h1>hello, world.</h1>
-</body>
-</html>
+---
+---
+
+<div class="col-xs-10 col-xs-offset-1">
+{% for post in site.posts limit: 5 %}
+    <div class="post well">
+      <small>{{ post.date | date: "%B %-d, %Y"}}</small>
+      <h2>{{ post.title }}</h2>
+      {{ post.content }}
+    </div>
+{% endfor %}
+
+</div>

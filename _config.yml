@@ -1,0 +1,16 @@
+# site settings
+author: Jordan Irwin
+baseurl: 
+description: This is a sample Jekyll Blog.
+highlighter: pygments
+name: JordanIrwin.net
+url: "http://localhost:4000"
+
+# defaults
+defaults:
+  -
+    scope:
+      path: ""
+      #type: "post"
+    values:
+      layout: "default"
