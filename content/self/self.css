@@ -1,15 +1,21 @@
 body {
-
   font-family: "Lucida Console", Monaco, monospace !important;
-  padding-top: 10px;
-  padding-bottom: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+/* content block has some height in case it's tiny or empty */
+.container .row.content {
+  min-height: 100px;
+}
+
+/* makes navigation justified */
+.navbar-nav.nav-justified > li{
+    float: none;
+}
+
+/* style our posts */
 .post h2 {
   margin-top: 0px;
   margin-bottom: 20px;
-}
-
-.navbar-nav.nav-justified > li{
-    float:none;
 }

@@ -1,10 +1,18 @@
 # site settings
-author: Jordan Irwin
+author: "Jordan Irwin"
 baseurl: 
-description: This is a sample Jekyll Blog.
+description: "The thoughts, dreams, rants, lessons, tips, tricks, stories, truths, and lies from one of no particular interest."
 highlighter: pygments
-name: JordanIrwin.net
+name: "JordanIrwin.net"
 url: "http://localhost:4000"
+
+navigation:
+- text: Latest stuff
+  url: /
+- text: Show everything
+  url: /archives/
+- text: Who is this?
+  url: /about/
 
 # defaults
 defaults:
