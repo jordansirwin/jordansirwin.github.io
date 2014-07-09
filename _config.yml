@@ -1,0 +1,24 @@
+# site settings
+author: "Jordan Irwin"
+baseurl: 
+description: "The thoughts, dreams, rants, lessons, tips, tricks, stories, truths, and lies from one of no particular interest."
+highlighter: pygments
+name: "JordanIrwin.net"
+#url: "http://localhost:4000"
+
+navigation:
+- text: Latest stuff
+  url: /
+- text: Show everything
+  url: /archives/
+- text: Who is this?
+  url: /about/
+
+# defaults
+defaults:
+  -
+    scope:
+      path: ""
+      #type: "post"
+    values:
+      layout: "default"
