@@ -1,5 +1,5 @@
 ---
-title: /random
+title: Listening
 ---
 
 > If you catch yourself thinking about your response, you are not listening.

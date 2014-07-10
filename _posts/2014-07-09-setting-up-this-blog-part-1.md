@@ -2,14 +2,16 @@
 title: Setting up this blog, Part 1
 ---
 
-I think it's only proper that the first post on the new blogging system is about setting up the new blogging system. So meta, much wow.
+Full Series: [Part 1][0], [Part 2][1]
+
+I think it's proper that my first post on the new blogging system is about setting up the new blogging system. So meta, much wow.
 
 Here were my goals:
 
 * Avoid WYSIWYG.
 * Learn something new and relevant.
 * Content must be reasonably exportable.
-* The act of writing should be as exciting as the content.
+* Writing should be as exciting as the content.
 
 With these goals in mind, I've switched away from Blogger and onto GitHub Pages. But not _just_ GitHub Pages, a full technology stack of goodness to learn and explore with it:
 
@@ -24,4 +26,8 @@ Additionally, I've dedicated myself to doing it the _hard way_ via command line-
 
 In the interest of finishing a post, I'm going to break this into multiple parts. 
 
-Next Part: Setting up my environment.
+Next Part: [Setting up my environment][1].
+
+
+[0]: {% post_url 2014-07-09-setting-up-this-blog-part-1 %}
+[1]: {% post_url 2014-07-09-setting-up-this-blog-part-2 %}
