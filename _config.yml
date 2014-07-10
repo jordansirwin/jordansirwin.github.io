@@ -7,11 +7,11 @@ name: "JordanIrwin.net"
 #url: "http://localhost:4000"
 
 navigation:
-- text: Latest stuff
+- text: Latest
   url: /
-- text: Show everything
+- text: Everything
   url: /archives/
-- text: Who is this?
+- text: About
   url: /about/
 
 # defaults
