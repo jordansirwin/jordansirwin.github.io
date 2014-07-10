@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JordanIrwin.net</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+          content="The thoughts, dreams, rants, lessons, tips, tricks, stories, truths, and lies from one of no particular interest.">
+
+    <link href="/content/bootstrap-3.2.0-dist/css/bootstrap.min.css" 
+          rel="stylesheet">
+    <link href="/content/bootswatch/slate.min.css" 
+          rel="stylesheet">
+    <link href="/content/pygments/syntax.css" 
+          rel="stylesheet">
+    <link href="/content/self/self.css" 
+          rel="stylesheet">
+
+    <script src="/content/bootstrap-3.2.0-dist/css/bootstrap.min.css"
+            type="text/javascript"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-10">
+          <p class="text-center">The thoughts, dreams, rants, lessons, tips, tricks, stories, truths, and lies from one of no particular interest.</p>
+        </div>
+      </div>
+      
+      <div class="row content">
+        <p>Full Series: <a href="/2014/07/09/setting-up-this-blog-part-1.html">Part 1</a>, <a href="/2014/07/09/setting-up-this-blog-part-2.html">Part 2</a></p>
+
+<p>A great deal of time was spent getting my environment configured reasonably sane. By <em>environment</em>, I mean:</p>
+
+<ul>
+  <li>Directory structure.</li>
+  <li>Git.</li>
+  <li>Writing.</li>
+  <li>Previewing.</li>
+</ul>
+
+<h4 id="directory-structure">Directory Structure</h4>
+
+<p><a href="https://github.com/jordansirwin/jordansirwin.github.io">My directory structure can be viewed on GitHub</a> (this blog and its source is wide-open for your review). I went through a few iterations, and may still go through more, but it’s a fairly standard structure for GitHub Pages + Jekyll.</p>
+
+<h4 id="git">Git</h4>
+
+<p><a href="https://pages.github.com">GitHub Pages has great documentation available</a>, but it wasn’t a silver bullet. GitHub Pages requires at least two branches: One to host the blog itself and one to store the source code for generating the blog. GitHub Pages respects a magical branch called <em>gh-pages</em> or the <em>master</em> branch. I chose to go with <em>master</em> for hosting and <em>source</em> for the source code. Admittedly, I didn’t get this right at first (or second, third, or tenth). </p>
+
+<p>Since I already had some source code in the <em>master</em> branch, I needed to change things around. I created a new branch for the source code:</p>
+
+<pre><code>git branch source --orphan
+</code></pre>
+
+<p>Then, I needed to cleanup my <em>master</em> branch of everything but the <em>.git</em> folder (well, anything that doesn’t start with a period (.):</p>
+
+<pre><code>find . -regex "\./[^.].*" -exec rm -rf {} \;
+git commit -m "insert kewl comment here"
+</code></pre>
+
+<p>Now I have a clean <em>master</em> and a fully loaded <em>source</em>. I’ll never do anything directly in the <em>master</em> branch. Everything will be done in <em>source</em>, then deployed (<strong>NOT</strong> merged!) to <em>master</em>. These two branches will never merge together again. </p>
+
+<h4 id="writing">Writing</h4>
+
+<p>Deciding what to write with was easy, <a href="http://www.sublimetext.com">Sublime</a>. Cross-platform, settings configured via JSON files, great plugin support, and sports a minimal UI- I love it. I currently use <a href="https://github.com/jordansirwin/dotfiles/tree/master/sublime">pretty basic settings</a> and only two plugins: <a href="https://sublime.wbond.net">Package Control</a> for installing packages (plugins) and <a href="https://sublime.wbond.net/packages/Markdown%20Preview">Markdown Preview</a> for lovely Markdown syntax highlights.</p>
+
+<h4 id="previewing">Previewing</h4>
+
+<p>As mentioned above, Markdown Preview offers some nice Markdown enhancements- including previewing via your browser. While I do use this feature when writing notes or other Markdown based documents, this blog is previewed via Jekyll for an identical match to the final product. </p>
+
+<p>To setup a local copy of the blog at <em>http://localhost:4000</em> and automatically update modified files for real-time previewing, I use this command line from my <em>source</em> branch:</p>
+
+<pre><code>jekyll serve -w
+</code></pre>
+
+<p>I use Safari to browse the URL and refresh as I want to preview changes.</p>
+
+<p>Next Part: Jekyll configuration via Frontmatter and building the blog’s HTML.</p>
+
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-10">
+          <ul class="nav navbar-nav nav-justified" role="navigation">
+            
+            <li>
+                <a href="/" title="">Latest stuff</a>
+            </li>
+            
+            <li>
+                <a href="/archives/" title="">Show everything</a>
+            </li>
+            
+            <li>
+                <a href="/about/" title="">Who is this?</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
