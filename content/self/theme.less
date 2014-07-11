@@ -11,6 +11,13 @@
 
 @well-bg:               #3B342E;
 
+@font-size-h1:            floor((@font-size-base * 2.5)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.0)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.5)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.20)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
 
 // other things
 body {
@@ -38,7 +45,7 @@ a {
 
 // style our posts
 .post {
-  h2 {
+  h3 {
     margin-top: 0px;
     margin-bottom: 25px;
   }
