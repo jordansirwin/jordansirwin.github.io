@@ -1264,7 +1264,7 @@ abbr[data-original-title] {
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
-  font-size: 17.5px;
+  font-size: 14px;
   border-left: 5px solid #eeeeee;
 }
 blockquote p:last-child,
@@ -6209,10 +6209,49 @@ a:hover {
   text-decoration: none;
 }
 .container .row.content {
+  margin-top: 25px;
   min-height: 100px;
 }
 .navbar-nav.nav-justified > li {
   float: none;
+}
+.responsive-col {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .responsive-col {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 768px) {
+  .responsive-col {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .responsive-col {
+    margin-left: 8.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .responsive-col {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .responsive-col {
+    margin-left: 16.66666667%;
+  }
+}
+.post {
+  margin-bottom: 65px;
 }
 .post h3 {
   margin-top: 0px;
@@ -6220,7 +6259,7 @@ a:hover {
 }
 .post h4 {
   margin-top: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .post p {
   margin-top: 15px;
