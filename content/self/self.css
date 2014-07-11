@@ -901,7 +901,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #f1f15d;
+  color: #eded2e;
   text-decoration: underline;
 }
 a:focus {
@@ -3061,7 +3061,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #f1f15d;
+  color: #eded2e;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4363,7 +4363,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #f1f15d;
+  color: #eded2e;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -6205,15 +6205,15 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* content block has some height in case it's tiny or empty */
+a:hover {
+  text-decoration: none;
+}
 .container .row.content {
   min-height: 100px;
 }
-/* makes navigation justified */
 .navbar-nav.nav-justified > li {
   float: none;
 }
-/* style our posts */
 .post h2 {
   margin-top: 0px;
   margin-bottom: 25px;
@@ -6221,4 +6221,8 @@ body {
 .post h4 {
   margin-top: 25px;
   margin-bottom: 10px;
+}
+.post p {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

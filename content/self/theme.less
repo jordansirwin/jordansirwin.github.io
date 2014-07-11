@@ -1,24 +1,16 @@
-//== Scaffolding
-//
-//## Settings for some of the most global styles.
-
-//** Background color for `<body>`.
+// Scaffolding
 @body-bg:               #47443D;
-//** Global text color on `<body>`.
 @text-color:            #DEDBD1;
+
+@link-color:            #F7F7A3;
+@link-hover-color:      darken(@link-color, 25%);
+@nav-link-hover-bg:     #847E6F;
 
 @font-family-monospace: "Lucida Console", Monaco, Consolas, monospace;
 @font-family-base:      @font-family-monospace;
 
 @well-bg:               #3B342E;
-@link-color:            #F7F7A3;
 
-@font-size-base:          14px;
-
-@nav-link-hover-bg: #847E6F;
-//@navbar-default-link-hover-bg:#FFFF7A;
-//@nav-link-hover-bg: #FFFF7A;
-//@nav-tabs-link-hover-border-color: #FFFF7A;
 
 // other things
 body {
@@ -27,17 +19,24 @@ body {
   padding-bottom: 20px;
 }
 
-/* content block has some height in case it's tiny or empty */
+// remove underscore from links
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// content block has some height in case it's tiny or empty
 .container .row.content {
   min-height: 100px;
 }
 
-/* makes navigation justified */
-.navbar-nav.nav-justified > li{
+// makes navigation justified
+.navbar-nav.nav-justified > li {
     float: none;
 }
 
-/* style our posts */
+// style our posts
 .post {
   h2 {
     margin-top: 0px;
@@ -46,6 +45,10 @@ body {
   h4 {
     margin-top: 25px;
     margin-bottom: 10px;
+  }
+  p {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
 
