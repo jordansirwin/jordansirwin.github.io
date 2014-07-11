@@ -8,6 +8,7 @@
 
 @font-family-monospace: "Lucida Console", Monaco, Consolas, monospace;
 @font-family-base:      @font-family-monospace;
+@blockquote-font-size:  @font-size-base;
 
 @well-bg:               #3B342E;
 
@@ -35,6 +36,7 @@ a {
 
 // content block has some height in case it's tiny or empty
 .container .row.content {
+  margin-top: 25px;
   min-height: 100px;
 }
 
@@ -43,15 +45,28 @@ a {
     float: none;
 }
 
+.responsive-col {
+  .make-xs-column(12);
+  .make-sm-column-offset(0);
+
+  .make-sm-column(10);
+  .make-sm-column-offset(1);
+
+  .make-md-column(8);
+  .make-md-column-offset(2);
+}
+
 // style our posts
 .post {
+  margin-bottom: 65px;
+
   h3 {
     margin-top: 0px;
     margin-bottom: 25px;
   }
   h4 {
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   p {
     margin-top: 15px;
