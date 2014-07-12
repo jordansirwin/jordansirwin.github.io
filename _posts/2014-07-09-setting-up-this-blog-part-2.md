@@ -2,7 +2,7 @@
 title: Setting up this blog, Part 2
 ---
 
-Full Series: [Part 1][0], [Part 2][1]
+Full Series: [Part 1][p1], [Part 2][p2], [Part 3][p3]
 
 A great deal of time was spent getting my environment configured reasonably sane. By _environment_, I mean:
 
@@ -49,12 +49,13 @@ To setup a local copy of the blog at _http://localhost:4000_ and automatically u
 I use Safari to browse the URL and refresh as I want to preview changes.
 
 
-Next Part: Jekyll configuration via Frontmatter and building the blog's HTML.
+Next Part: [Jekyll and building the blog's HTML][p3].
 
 
 
-[0]: {% post_url 2014-07-09-setting-up-this-blog-part-1 %}
-[1]: {% post_url 2014-07-09-setting-up-this-blog-part-2 %}
+[p1]: {% post_url 2014-07-09-setting-up-this-blog-part-1 %}
+[p2]: {% post_url 2014-07-09-setting-up-this-blog-part-2 %}
+[p3]: {% post_url 2014-07-11-setting-up-this-blog-part-3 %}
 [2]: https://github.com/jordansirwin/jordansirwin.github.io
 [3]: http://www.sublimetext.com
 [4]: https://sublime.wbond.net

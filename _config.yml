@@ -4,7 +4,6 @@ baseurl:
 description: "The thoughts, dreams, rants, lessons, tips, tricks, stories, truths, and lies from one of no particular interest."
 highlighter: pygments
 name: "JordanIrwin.net"
-#url: "http://localhost:4000"
 
 navigation:
 - text: Latest
@@ -19,7 +18,6 @@ defaults:
   -
     scope:
       path: ""
-      #type: "post"
     values:
       layout: "default"
   -
