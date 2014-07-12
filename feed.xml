@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JordanIrwin.net</title>
+    <description>Thoughts, rants, tips, tricks, stories, truths, and lies.</description>    
+    <link>http://www.jordanirwin.net</link>
+    <atom:link href="http://www.jordanirwin.net/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Setting up this blog, Part 3</title>
+        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1.html&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2.html&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3.html&quot;&gt;Part 3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once I had my environment ready, I needed to actually create the blog. While blogs &lt;em&gt;can&lt;/em&gt; be a complex CMS, I didn’t want mine to be. I’m a fan of recent trends for &lt;em&gt;statically compiled websites&lt;/em&gt; and GitHub Pages natively supports &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;- it was an easy match.&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h4&gt;
+
+&lt;p&gt;I initially used GitHub Pages’ automatic Jekyll compilation, but quickly switched to local compilation to take advantage of newer features (at the time of writing, GitHub runs Jekyll v1.5.1 while v2.1.1 is available). The features I wanted to use were: &lt;a href=&quot;http://jekyllrb.com/docs/configuration/#frontmatter-defaults&quot;&gt;Frontmatter Defaults&lt;/a&gt; and &lt;a href=&quot;http://jekyllrb.com/docs/plugins/&quot;&gt;Plugins&lt;/a&gt; (although I don’t actually use any plugins yet). I disabled GitHub’s by adding an empty &lt;em&gt;.nojekyll&lt;/em&gt; file to the root of my &lt;em&gt;source&lt;/em&gt; branch. &lt;/p&gt;
+
+&lt;p&gt;To get started on the blog, I created a single HTML page representing the landing page. I wanted a minimal look, drawing focus directly to the content. To help visualize, I hacked in some fake posts to have content to work with. I grabbed &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt; to for grid layout and theming. Of course, creating a webpage layout and styling didn’t &lt;em&gt;just happen&lt;/em&gt;, I spent hours across days fine tuning it into something I was happy with.&lt;/p&gt;
+
+&lt;p&gt;With a structure in place, I needed to get posts to dynamically show instead of being hardcoded. Jekyll uses Liquid Templates to handle dynamic behavior. Here’s a snippet of the loop I used:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% for post in site.posts limit: 10 %}
+&amp;lt;div class=&quot;post well&quot;&amp;gt;
+  &amp;lt;small&amp;gt;{{ post.date | date: &quot;%B %-d, %Y&quot;}}&amp;lt;/small&amp;gt;
+  &amp;lt;h3&amp;gt;&amp;lt;a href=&quot;{{ post.url }}&quot;&amp;gt;{{ post.title }}&amp;lt;/a&amp;gt;&amp;lt;/h3&amp;gt;
+  {{ post.content }}
+&amp;lt;/div&amp;gt;
+{% endfor %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With the above block, I now had a webpage that could dynamically load the latest 10 posts. Jekyll expects posts to be in a folder named &lt;em&gt;_posts&lt;/em&gt; and &lt;a href=&quot;http://jekyllrb.com/docs/posts/&quot;&gt;named in a specific way&lt;/a&gt;. I then migrated a few posts from the old blog system using &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; for content layout (&lt;a href=&quot;https://github.com/jordansirwin/jordansirwin.github.io/tree/source/_posts&quot;&gt;see my &lt;em&gt;_posts&lt;/em&gt; folder on GitHub&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Now I had a website and some content, but I since I was now using Liquid to dynamically load posts I needed to &lt;em&gt;compile&lt;/em&gt; the website into a static page. Jekyll makes it easy!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;jekyll build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Boom. This created a &lt;em&gt;_site&lt;/em&gt; folder with the compiled HTML ready to go. Wait, go where?&lt;/p&gt;
+
+&lt;p&gt;Next Part: Deploying to GitHub Pages.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 11 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3.html</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3.html</guid>
+      </item>
+    
+      <item>
+        <title>Setting up this blog, Part 2</title>
+        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1.html&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2.html&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3.html&quot;&gt;Part 3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A great deal of time was spent getting my environment configured reasonably sane. By &lt;em&gt;environment&lt;/em&gt;, I mean:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Directory structure.&lt;/li&gt;
+  &lt;li&gt;Git.&lt;/li&gt;
+  &lt;li&gt;Writing.&lt;/li&gt;
+  &lt;li&gt;Previewing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;directory-structure&quot;&gt;Directory Structure&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jordansirwin/jordansirwin.github.io&quot;&gt;My directory structure can be viewed on GitHub&lt;/a&gt; (this blog and its source is wide-open for your review). I went through a few iterations, and may still go through more, but it’s a fairly standard structure for GitHub Pages + Jekyll.&lt;/p&gt;
+
+&lt;h4 id=&quot;git&quot;&gt;Git&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages has great documentation available&lt;/a&gt;, but it wasn’t a silver bullet. GitHub Pages requires at least two branches: One to host the blog itself and one to store the source code for generating the blog. GitHub Pages respects a magical branch called &lt;em&gt;gh-pages&lt;/em&gt; or the &lt;em&gt;master&lt;/em&gt; branch. I chose to go with &lt;em&gt;master&lt;/em&gt; for hosting and &lt;em&gt;source&lt;/em&gt; for the source code. Admittedly, I didn’t get this right at first (or second, third, or tenth). &lt;/p&gt;
+
+&lt;p&gt;Since I already had some source code in the &lt;em&gt;master&lt;/em&gt; branch, I needed to change things around. I created a new branch for the source code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git branch source --orphan
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, I needed to cleanup my &lt;em&gt;master&lt;/em&gt; branch of everything but the &lt;em&gt;.git&lt;/em&gt; folder (well, anything that doesn’t start with a period (.):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -regex &quot;\./[^.].*&quot; -exec rm -rf {} \;
+git commit -m &quot;insert kewl comment here&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I have a clean &lt;em&gt;master&lt;/em&gt; and a fully loaded &lt;em&gt;source&lt;/em&gt;. I’ll never do anything directly in the &lt;em&gt;master&lt;/em&gt; branch. Everything will be done in &lt;em&gt;source&lt;/em&gt;, then deployed (&lt;strong&gt;NOT&lt;/strong&gt; merged!) to &lt;em&gt;master&lt;/em&gt;. These two branches will never merge together again. &lt;/p&gt;
+
+&lt;h4 id=&quot;writing&quot;&gt;Writing&lt;/h4&gt;
+
+&lt;p&gt;Deciding what to write with was easy, &lt;a href=&quot;http://www.sublimetext.com&quot;&gt;Sublime&lt;/a&gt;. Cross-platform, settings configured via JSON files, great plugin support, and sports a minimal UI- I love it. I currently use &lt;a href=&quot;https://github.com/jordansirwin/dotfiles/tree/master/sublime&quot;&gt;pretty basic settings&lt;/a&gt; and only two plugins: &lt;a href=&quot;https://sublime.wbond.net&quot;&gt;Package Control&lt;/a&gt; for installing packages (plugins) and &lt;a href=&quot;https://sublime.wbond.net/packages/Markdown%20Preview&quot;&gt;Markdown Preview&lt;/a&gt; for lovely Markdown syntax highlights.&lt;/p&gt;
+
+&lt;h4 id=&quot;previewing&quot;&gt;Previewing&lt;/h4&gt;
+
+&lt;p&gt;As mentioned above, Markdown Preview offers some nice Markdown enhancements- including previewing via your browser. While I do use this feature when writing notes or other Markdown based documents, this blog is previewed via Jekyll for an identical match to the final product. &lt;/p&gt;
+
+&lt;p&gt;To setup a local copy of the blog at &lt;em&gt;http://localhost:4000&lt;/em&gt; and automatically update modified files for real-time previewing, I use this command line from my &lt;em&gt;source&lt;/em&gt; branch:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;jekyll serve -w
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I use Safari to browse the URL and refresh as I want to preview changes.&lt;/p&gt;
+
+&lt;p&gt;Next Part: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3.html&quot;&gt;Jekyll and building the blog’s HTML&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 09 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2.html</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2.html</guid>
+      </item>
+    
+      <item>
+        <title>Setting up this blog, Part 1</title>
+        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1.html&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2.html&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3.html&quot;&gt;Part 3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I think it’s proper that my first post on the new blogging system is about setting up the new blogging system. So meta, much wow.&lt;/p&gt;
+
+&lt;p&gt;Here were my goals:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Avoid WYSIWYG.&lt;/li&gt;
+  &lt;li&gt;Learn something new and relevant.&lt;/li&gt;
+  &lt;li&gt;Content must be reasonably exportable.&lt;/li&gt;
+  &lt;li&gt;Writing should be as exciting as the content.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With these goals in mind, I’ve switched away from Blogger and onto GitHub Pages. But not &lt;em&gt;just&lt;/em&gt; GitHub Pages, a full technology stack of goodness to learn and explore with it:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sublime for writing.&lt;/li&gt;
+  &lt;li&gt;Markdown for markup.&lt;/li&gt;
+  &lt;li&gt;Jekyll for static compilation.&lt;/li&gt;
+  &lt;li&gt;Git for source control.&lt;/li&gt;
+  &lt;li&gt;GitHub Pages for hosting.&lt;/li&gt;
+  &lt;li&gt;Hover for domain registration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, I’ve dedicated myself to doing it the &lt;em&gt;hard way&lt;/em&gt; via command line- so I’ve been forced to learn a great deal more about OSX, Terminal, and Unix Commands. &lt;/p&gt;
+
+&lt;p&gt;In the interest of finishing a post, I’m going to break this into multiple parts. &lt;/p&gt;
+
+&lt;p&gt;Next Part: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1.html&quot;&gt;Setting up my environment&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 09 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1.html</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1.html</guid>
+      </item>
+    
+      <item>
+        <title>Listening</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;If you catch yourself thinking about your response, you are not listening.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://leadersinheels.com/career/10-tips-on-becoming-a-connected-listener/&quot;&gt;Source: 10 tips on becoming a connected listener&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 16 May 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/05/16/random.html</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/05/16/random.html</guid>
+      </item>
+    
+      <item>
+        <title>Apple TV Speculation</title>
+        <description>&lt;p&gt;With years of speculation on Apple’s plan for “reinventing the television”, I figure it’s time for me to increase the noise.&lt;/p&gt;
+
+&lt;p&gt;My Apple TV Prediction In Bullets For Guided Reading:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;No significant changes to the existing Apple TV (other than boosted hardware specs).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Overhaul to the existing UI, primarily to accommodate my actual prediction in the next point…&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A new, psuedo-optional, remote that’s a striped down iPod Touch. This “iRemote” is simply a thin client for the Apple TV, offering:
+    &lt;ul&gt;
+      &lt;li&gt;Apple TV navigation mirrored on the iRemote. (This is the primary, and significant, difference from the existing Remote App)&lt;/li&gt;
+      &lt;li&gt;Text inputs trigger the iOS onscreen keyboard.&lt;/li&gt;
+      &lt;li&gt;Apps can generate any kind of digital input device they want (game controllers!) on the entire screen of the iRemote. Generic controls available by default, including the existing Remote App controls.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Apple TV continues to cost only $99, but without the iRemote.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;iRemote bought separately for $99.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;All existing iOS devices are iRemotes via an updated Remote App.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Existing Apple TVs are backwards compatible with the iRemote via a software update.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With a plan like this, Apple could potentially dominate the television market without actually entering the television market. Who cares what TV you bought or where you got it from, just add on the Apple TV for your entertainment needs!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;edit: Clarified that default controls would be provided for backwards compatibility. Custom controls are optional, not required.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Aug 2013 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2013/08/21/apple-tv-speculation.html</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2013/08/21/apple-tv-speculation.html</guid>
+      </item>
+    
+      <item>
+        <title>Hello World, again.</title>
+        <description>&lt;p&gt;Here we go again…&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;HereWeGoAgain.ConsoleApp&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Program&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Hello World, again.&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 25 Jun 2013 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2013/06/25/hello-world-again.html</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2013/06/25/hello-world-again.html</guid>
+      </item>
+    
+  </channel>
+</rss>
