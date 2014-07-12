@@ -16,7 +16,7 @@
 
 &lt;p&gt;I initially used GitHub Pages’ automatic Jekyll compilation, but quickly switched to local compilation to take advantage of newer features (at the time of writing, GitHub runs Jekyll v1.5.1 while v2.1.1 is available). The features I wanted to use were: &lt;a href=&quot;http://jekyllrb.com/docs/configuration/#frontmatter-defaults&quot;&gt;Frontmatter Defaults&lt;/a&gt; and &lt;a href=&quot;http://jekyllrb.com/docs/plugins/&quot;&gt;Plugins&lt;/a&gt; (although I don’t actually use any plugins yet). I disabled GitHub’s by adding an empty &lt;em&gt;.nojekyll&lt;/em&gt; file to the root of my &lt;em&gt;source&lt;/em&gt; branch. &lt;/p&gt;
 
-&lt;p&gt;To get started on the blog, I created a single HTML page representing the landing page. I wanted a minimal look, drawing focus directly to the content. To help visualize, I hacked in some fake posts to have content to work with. I grabbed &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt; to for grid layout and theming. Of course, creating a webpage layout and styling didn’t &lt;em&gt;just happen&lt;/em&gt;, I spent hours across days fine tuning it into something I was happy with.&lt;/p&gt;
+&lt;p&gt;To get started on the blog, I created a single HTML page representing the landing page. I wanted a minimal look, drawing focus directly to the content. To help visualize, I hacked in some fake posts to have content to work with. I grabbed &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt; for grid layout and theming. Of course, creating a webpage layout and styling didn’t &lt;em&gt;just happen&lt;/em&gt;, I spent hours across days fine tuning it into something I was happy with.&lt;/p&gt;
 
 &lt;p&gt;With a structure in place, I needed to get posts to dynamically show instead of being hardcoded. Jekyll uses Liquid Templates to handle dynamic behavior. Here’s a snippet of the loop I used:&lt;/p&gt;
 
@@ -31,7 +31,7 @@
 
 &lt;p&gt;With the above block, I now had a webpage that could dynamically load the latest 10 posts. Jekyll expects posts to be in a folder named &lt;em&gt;_posts&lt;/em&gt; and &lt;a href=&quot;http://jekyllrb.com/docs/posts/&quot;&gt;named in a specific way&lt;/a&gt;. I then migrated a few posts from the old blog system using &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; for content layout (&lt;a href=&quot;https://github.com/jordansirwin/jordansirwin.github.io/tree/source/_posts&quot;&gt;see my &lt;em&gt;_posts&lt;/em&gt; folder on GitHub&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;Now I had a website and some content, but I since I was now using Liquid to dynamically load posts I needed to &lt;em&gt;compile&lt;/em&gt; the website into a static page. Jekyll makes it easy!&lt;/p&gt;
+&lt;p&gt;Now I had a website and some content, but for Liquid to dynamically load posts I needed to &lt;em&gt;compile&lt;/em&gt; the website into a static page. Jekyll makes it easy!&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;jekyll build
 &lt;/code&gt;&lt;/pre&gt;
