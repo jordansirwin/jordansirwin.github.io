@@ -9,3 +9,5 @@ Setting up this blog
 * Pages: About, Archives
 * Feed
 * Drafts
+* Kuler
+* Environments (_config-dev.yml)

@@ -6208,6 +6208,9 @@ body {
 a:hover {
   text-decoration: none;
 }
+strong {
+  color: #f3f2ef;
+}
 .content {
   margin-top: 10px;
   min-height: 100px;
@@ -6249,4 +6252,9 @@ a:hover {
 .post p {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.post img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

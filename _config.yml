@@ -3,6 +3,7 @@ author: "Jordan Irwin"
 baseurl: 
 description: "Thoughts, rants, tips, tricks, stories, truths, and lies."
 highlighter: pygments
+permalink: pretty
 name: "JordanIrwin.net"
 url: http://www.jordanirwin.net
 

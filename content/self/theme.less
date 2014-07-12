@@ -43,6 +43,10 @@ a {
   }
 }
 
+strong {
+  color: lighten(@text-color, 10%);
+}
+
 // content block has some height in case it's tiny or empty
 .content {
   margin-top: 10px;
@@ -74,16 +78,25 @@ a {
 // style our posts
 .post {
   h3 {
+
+  //color: lighten(@text-color, 15%);
     margin-top: 0px;
     margin-bottom: 25px;
   }
   h4 {
+
+  //color: lighten(@text-color, 15%);
     margin-top: 25px;
     margin-bottom: 5px;
   }
   p {
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+  img {   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
