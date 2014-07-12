@@ -53,9 +53,9 @@ Next Part: [Jekyll and building the blog's HTML][p3].
 
 
 
-[p1]: {% post_url 2014-07-09-setting-up-this-blog-part-1 %}
-[p2]: {% post_url 2014-07-09-setting-up-this-blog-part-2 %}
-[p3]: {% post_url 2014-07-11-setting-up-this-blog-part-3 %}
+[p1]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-1 %}
+[p2]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-2 %}
+[p3]: {{ site.url }}{% post_url 2014-07-11-setting-up-this-blog-part-3 %}
 [2]: https://github.com/jordansirwin/jordansirwin.github.io
 [3]: http://www.sublimetext.com
 [4]: https://sublime.wbond.net

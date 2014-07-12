@@ -35,9 +35,9 @@ Boom. This created a __site_ folder with the compiled HTML ready to go. Wait, go
 Next Part: Deploying to GitHub Pages.
 
 
-[p1]: {% post_url 2014-07-09-setting-up-this-blog-part-1 %}
-[p2]: {% post_url 2014-07-09-setting-up-this-blog-part-2 %}
-[p3]: {% post_url 2014-07-11-setting-up-this-blog-part-3 %}
+[p1]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-1 %}
+[p2]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-2 %}
+[p3]: {{ site.url }}{% post_url 2014-07-11-setting-up-this-blog-part-3 %}
 [jekyll]: http://jekyllrb.com
 [fmd]: http://jekyllrb.com/docs/configuration/#frontmatter-defaults
 [plugins]: http://jekyllrb.com/docs/plugins/

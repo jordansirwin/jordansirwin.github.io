@@ -29,6 +29,6 @@ In the interest of finishing a post, I'm going to break this into multiple parts
 Next Part: [Setting up my environment][p1].
 
 
-[p1]: {% post_url 2014-07-09-setting-up-this-blog-part-1 %}
-[p2]: {% post_url 2014-07-09-setting-up-this-blog-part-2 %}
-[p3]: {% post_url 2014-07-11-setting-up-this-blog-part-3 %}
+[p1]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-1 %}
+[p2]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-2 %}
+[p3]: {{ site.url }}{% post_url 2014-07-11-setting-up-this-blog-part-3 %}

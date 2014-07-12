@@ -1,9 +1,10 @@
 # site settings
 author: "Jordan Irwin"
 baseurl: 
-description: "The thoughts, dreams, rants, lessons, tips, tricks, stories, truths, and lies from one of no particular interest."
+description: "Thoughts, rants, tips, tricks, stories, truths, and lies."
 highlighter: pygments
 name: "JordanIrwin.net"
+url: http://www.jordanirwin.net
 
 navigation:
 - text: Latest
@@ -12,6 +13,8 @@ navigation:
   url: /archives/
 - text: About
   url: /about/
+- text: Feed
+  url: /feed.xml
 
 # defaults
 defaults:
