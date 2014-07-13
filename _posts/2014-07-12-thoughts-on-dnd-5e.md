@@ -77,11 +77,17 @@ I expect this will make combat much more dynamic and cinematic than previous edi
 
 Likely the biggest simplification in 5e, the Proficiency Bonus is a blanket modifier that applies to any ability, skill, and save that your character is Proficient in. This makes character creation and game play easier, as there aren't various bonuses applies all over the place. The Proficiency Bonus increases with level, representing the expected power increase for the character. 
 
-This feature isn't only about simplification though. Having a small, controlled bonus that applies to all rolls makes the game easier to balance and contain. The goal is to prevent characters from becoming so powerful that they become mechanically immune to most creatures and effects. I like the ideas that an experienced party of adventures can still be at risk against a horde of goblins. Wizards has referred to this as [Bounded Accuracy][bounded], and I'm excited to see how it turns out.
+This feature isn't only about simplification though. Having a small, controlled bonus that applies to all rolls makes the game easier to balance and contain. The goal is to prevent characters from becoming so powerful that they become mechanically immune to most creatures and effects. I like the idea that an experienced party of adventures can be at risk against a horde of goblins. Wizards of the Coast has referred to this as [Bounded Accuracy][bounded], and I'm excited to see how it turns out.
 
 
+#### Stay Tuned ####
+
+D&D 5e is in its infancy. In the coming months and years, additional books filled with rules and stories will continue to expand the game and its universe of worlds. I'll reserve true judgment until after the core books are released and I've had ample time to use them in game play, but for now I'm certainly excited at its prospects.
+
+You can find more information about upcoming books and news at the [Official Dungeons & Dragons site][dnd].
 
 [basic]: http://www.wizards.com/dnd/Article.aspx?x=dnd/basicrules
 [backgrounds]: http://www.wizards.com/dnd/Article.aspx?x=dnd/4ll/20140505
 [dndlogo]: {{ site.url }}/content/post_resources/dnd_logo.png
 [bounded]: http://www.wizards.com/DnD/Article.aspx?x=dnd/4ll/20120604%EF%BB%BF
+[dnd]: http://www.wizards.com/dnd/
