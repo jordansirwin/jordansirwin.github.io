@@ -8,6 +8,17 @@ name: "JordanIrwin.net"
 url: http://www.jordanirwin.net
 useAnalytics: true
 
+# meta tag for "keywords"
+keywords:
+  - geek
+  - roleplay
+  - technology
+  - programming
+  - c#
+  - video game
+  - gaming
+
+# navigation links
 navigation:
 - text: Latest
   url: /
@@ -18,7 +29,7 @@ navigation:
 - text: Feed
   url: /feed.xml
 
-# defaults
+# default settings
 defaults:
   -
     scope:
