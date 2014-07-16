@@ -6250,6 +6250,18 @@ strong {
   color: #fefefe;
   margin-top: 30px;
   margin-bottom: 10px;
+  padding-top: 5px;
+  /* can't get this to look good, but close...
+    &:before {
+      content: "";
+      border-top: 1px dashed darken(@text-color, 40%);
+      display: block;
+      margin-bottom: 3px;
+      //margin-left: auto;
+      //margin-right: auto;
+      width:25px;
+    }
+    */
 }
 .post h5 {
   color: #fefefe;
