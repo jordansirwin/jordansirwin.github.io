@@ -25,7 +25,7 @@
 @font-size-h2:            floor((@font-size-base * 2.0)); // ~30px
 @font-size-h3:            ceil((@font-size-base * 1.5)); // ~24px
 @font-size-h4:            ceil((@font-size-base * 1.20)); // ~18px
-@font-size-h5:            @font-size-base;
+@font-size-h5:            ceil((@font-size-base * 1.00));
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
 
@@ -64,9 +64,6 @@ strong {
 
   .make-sm-column(10);
   .make-sm-column-offset(1);
-
-  //.make-md-column(10);
-  //.make-md-column-offset(1);
 }
 
 .latest-posts {
@@ -78,25 +75,31 @@ strong {
 // style our posts
 .post {
   h3 {
-
-  //color: lighten(@text-color, 15%);
+    color: lighten(@text-color, 15%);
     margin-top: 0px;
     margin-bottom: 25px;
   }
   h4 {
 
-  //color: lighten(@text-color, 15%);
-    margin-top: 25px;
-    margin-bottom: 5px;
+    color: lighten(@text-color, 15%);
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  h5 {
+
+    color: lighten(@text-color, 15%);
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
   p {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   img {   
     display: block;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
   }
 }
 
