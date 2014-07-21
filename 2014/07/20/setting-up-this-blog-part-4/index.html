@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JordanIrwin.net</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+          content="Thoughts, rants, tips, tricks, stories, truths, and lies.">
+    <meta name="keywords" 
+          content="geek,roleplay,technology,programming,c#,video game,gaming" />
+
+    <link href="http://www.jordanirwin.net/feed.xml" 
+          rel="alternate" 
+          type="application/atom+xml">
+    <link href="/content/pygments/syntax.css" 
+          rel="stylesheet">
+    <link href="/content/self/self.css" 
+          rel="stylesheet">
+
+    <script 
+      src="//code.jquery.com/jquery-2.1.1.min.js"
+      type="text/javascript"></script>
+    <script 
+      src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+      type="text/javascript"></script>
+            
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="responsive-col">
+          <p class="text-center">Thoughts, rants, tips, tricks, stories, truths, and lies.</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="content responsive-col">
+          <div class="post well">
+  <small>July 20, 2014</small>
+  <h3><a href="/2014/07/20/setting-up-this-blog-part-4/">Setting up this blog, Part 4</a></h3>
+
+  <p>Full Series: <a href="http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/">Part 1</a>, <a href="http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/">Part 2</a>, <a href="http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/">Part 3</a>, <a href="http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/">Part 4</a></p>
+
+<p>Deploying and hosting the blog to GitHub Pages turned out to be a larger task than I anticipated. Not because it’s a complicated matter, but because I was initially confused and stuborn about how I wanted to handle it.</p>
+
+<h4 id="deploying">Deploying</h4>
+
+<p><a href="http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/">As I mentioned before</a>, I’m using GitHub Pages <em>User Pages</em> instead the <em>Project Pages</em> since this will be a personal website instead of a product/project specific site. This means that the <em>master</em> branch represents the internet facing website (instead of a branch named <em>gh_pages</em>). I created a second branch called <em>source</em> that I use for writing and development.</p>
+
+<p>Considering these facts:</p>
+
+<ul>
+  <li>I’m using <em>source</em> for writing and <em>master</em> for hosting.</li>
+  <li>I have a custom bootstrap theme and compiling my own LESS.</li>
+  <li>I’m compiling the website with Jekyll myself.</li>
+</ul>
+
+<p>This is the workflow:</p>
+
+<ol>
+  <li>Write in <em>source</em></li>
+  <li>Commit <em>source</em></li>
+  <li>Compile LESS into CSS</li>
+  <li>Compile into website via Jekyll</li>
+  <li>Checkout <em>master</em></li>
+  <li>Remove previous files from <em>master</em> </li>
+  <li>Copy compiled website from <em>source</em> to <em>master</em></li>
+  <li>Commit <em>master</em></li>
+  <li>Push <em>master</em> to GitHub</li>
+</ol>
+
+<p>That’s alot of steps. Also, if something wasn’t right I would need to return to the <em>source</em> branch and start again at Step 1. Bleh.</p>
+
+<p>I’ve addressed this complexity in two ways: Each branch is checked out into their own folders simultaniously and I’ve written a shell script to handle the vast majority of the steps.</p>
+
+<p>Here’s my current workflow:</p>
+
+<ol>
+  <li>Write in <em>source</em></li>
+  <li>Commit <em>source</em></li>
+  <li>Execute deploy.sh</li>
+</ol>
+
+<h5 id="folder-per-branch">Folder Per Branch</h5>
+
+<p>To remove the “hassle” of switching between <em>source</em> and <em>master</em> during deployments, I’ve chosen to keep them both checked out into their own folders. I did this by having two clones of my blog, one stays in <em>master</em> and the other stays in <em>source</em>.</p>
+
+<p><img src="http://www.jordanirwin.net/content/posts/2014-07-20-setting-up-this-blog-part-4/branch_folders.jpg" alt="Branch Folders" /></p>
+
+<p>This also solved another problem I was struggling with: Cleaning up the <em>master</em> branch of old files. I couldn’t find a satisfying way to remove existing files from the <em>master</em> branch without removing important things like .git, .gitignore, etc… While likely not the best solution, here’s the command I came up with for cleaning up (it’s executed from the <em>source</em> branch folder, hence the pathing): </p>
+
+<pre><code>find ../../master -regex ".*/master/[^.].*" -exec rm -rf {} \;
+</code></pre>
+
+<p>Why clean it up at all? Since <em>source</em> and <em>master</em> will never merge, I wanted be certain that <em>master</em> always reflected the current state of the Jekyll compiled website. Older, deleted files shouldn’t be left around. I simply just wipe out the files, copy in the new ones, and deploy (Git amazingly calculates neccessary deletes, adds, and edits correctly).</p>
+
+<h5 id="shell-script">Shell Script</h5>
+
+<p>The most significant optimization was to wrap most steps into a shell script. Here’s the current version of that script, although I expect it will evolve over time. <a href="https://github.com/jordansirwin/jordansirwin.github.io/blob/source/_build/deploy.sh">You can find the latest version of the script here</a>.</p>
+
+<pre><code>echo "Compiling less"
+lessc ../content/self/self.less \
+  &gt; ../content/self/self.css
+
+echo "Building _site"
+jekyll build -s .. -d ../_site
+
+echo "Deleting master"
+find ../../master \
+  -regex ".*/master/[^.].*" \
+  -exec rm -rf {} \;
+
+echo "Copying to master"
+cp -r ../_site/ ../../master/
+
+echo "Adding to git:master"
+git --git-dir=../../master/.git \
+  --work-tree=../../master/ \
+  add --all
+
+echo "Committing to git:master"
+git --git-dir=../../master/.git \
+  --work-tree=../../master/ \
+  commit -am "Deploying"
+
+echo "Pushing to github pages:master"
+git --git-dir=../../master/.git \
+  --work-tree=../../master/ \
+  push origin master
+  
+echo "Done!"
+</code></pre>
+
+<p>The script labels the various steps, but it’s important to remember that I execute it via the <em>source</em> branch inside the source/_build folder. Because I’m in another branch and another folder, there’s two things to note in this script:</p>
+
+<ol>
+  <li>Bash commands are given relative paths from source/_build to master.</li>
+  <li>Git commands are using –git-dir and –work-tree to indicate operations are for the <em>master</em> branch.</li>
+</ol>
+
+<p>Because of this script I can write and commit as needed, then run a single shell command to compile, synchronize with <em>master</em>, and deploy.</p>
+
+<h4 id="previewing">Previewing</h4>
+
+<p>Now that I can write and deploy, I realized the need to preview all of my changes (new content or website changes). Since my deploy script did everything I needed, I simply copied it and removed the steps relevant to deployment only. Here’s my test.sh shell script in current form:</p>
+
+<pre><code>echo "Compiling less"
+lessc ../content/self/self.less \
+  &gt; ../content/self/self.css
+
+echo "Building and Hosting _site"
+jekyll serve \
+  --config ../_config.yml,../_config-dev.yml \
+  -w -s .. \
+  -d ../_site
+</code></pre>
+
+<p>Main differences from deploy.sh:</p>
+
+<ul>
+  <li>Jekyll is called with the <em>serve</em> argument instead of <em>build</em></li>
+  <li>Does not copy to master, commit, or push to GitHub Pages</li>
+</ul>
+
+<p>One I run this script, I can preview my blog just as it would look on GitHub Pages by visiting http://localhost:4000 in my browser.</p>
+
+<p>Next Part: Custom DNS via Hover</p>
+
+
+</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="responsive-col">
+          <ul class="nav navbar-nav nav-justified" role="navigation">
+            
+            <li>
+                <a href="/" title="">Latest</a>
+            </li>
+            
+            <li>
+                <a href="/archives/" title="">Everything</a>
+            </li>
+            
+            <li>
+                <a href="/about/" title="">About</a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" title="">Feed</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-52729827-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</html>

@@ -7,10 +7,145 @@
     <atom:link href="http://www.jordanirwin.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Setting up this blog, Part 4</title>
+        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/&quot;&gt;Part 4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Deploying and hosting the blog to GitHub Pages turned out to be a larger task than I anticipated. Not because it’s a complicated matter, but because I was initially confused and stuborn about how I wanted to handle it.&lt;/p&gt;
+
+&lt;h4 id=&quot;deploying&quot;&gt;Deploying&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;As I mentioned before&lt;/a&gt;, I’m using GitHub Pages &lt;em&gt;User Pages&lt;/em&gt; instead the &lt;em&gt;Project Pages&lt;/em&gt; since this will be a personal website instead of a product/project specific site. This means that the &lt;em&gt;master&lt;/em&gt; branch represents the internet facing website (instead of a branch named &lt;em&gt;gh_pages&lt;/em&gt;). I created a second branch called &lt;em&gt;source&lt;/em&gt; that I use for writing and development.&lt;/p&gt;
+
+&lt;p&gt;Considering these facts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I’m using &lt;em&gt;source&lt;/em&gt; for writing and &lt;em&gt;master&lt;/em&gt; for hosting.&lt;/li&gt;
+  &lt;li&gt;I have a custom bootstrap theme and compiling my own LESS.&lt;/li&gt;
+  &lt;li&gt;I’m compiling the website with Jekyll myself.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is the workflow:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write in &lt;em&gt;source&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Commit &lt;em&gt;source&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Compile LESS into CSS&lt;/li&gt;
+  &lt;li&gt;Compile into website via Jekyll&lt;/li&gt;
+  &lt;li&gt;Checkout &lt;em&gt;master&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Remove previous files from &lt;em&gt;master&lt;/em&gt; &lt;/li&gt;
+  &lt;li&gt;Copy compiled website from &lt;em&gt;source&lt;/em&gt; to &lt;em&gt;master&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Commit &lt;em&gt;master&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Push &lt;em&gt;master&lt;/em&gt; to GitHub&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s alot of steps. Also, if something wasn’t right I would need to return to the &lt;em&gt;source&lt;/em&gt; branch and start again at Step 1. Bleh.&lt;/p&gt;
+
+&lt;p&gt;I’ve addressed this complexity in two ways: Each branch is checked out into their own folders simultaniously and I’ve written a shell script to handle the vast majority of the steps.&lt;/p&gt;
+
+&lt;p&gt;Here’s my current workflow:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write in &lt;em&gt;source&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Commit &lt;em&gt;source&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Execute deploy.sh&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;folder-per-branch&quot;&gt;Folder Per Branch&lt;/h5&gt;
+
+&lt;p&gt;To remove the “hassle” of switching between &lt;em&gt;source&lt;/em&gt; and &lt;em&gt;master&lt;/em&gt; during deployments, I’ve chosen to keep them both checked out into their own folders. I did this by having two clones of my blog, one stays in &lt;em&gt;master&lt;/em&gt; and the other stays in &lt;em&gt;source&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.jordanirwin.net/content/posts/2014-07-20-setting-up-this-blog-part-4/branch_folders.jpg&quot; alt=&quot;Branch Folders&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This also solved another problem I was struggling with: Cleaning up the &lt;em&gt;master&lt;/em&gt; branch of old files. I couldn’t find a satisfying way to remove existing files from the &lt;em&gt;master&lt;/em&gt; branch without removing important things like .git, .gitignore, etc… While likely not the best solution, here’s the command I came up with for cleaning up (it’s executed from the &lt;em&gt;source&lt;/em&gt; branch folder, hence the pathing): &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find ../../master -regex &quot;.*/master/[^.].*&quot; -exec rm -rf {} \;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Why clean it up at all? Since &lt;em&gt;source&lt;/em&gt; and &lt;em&gt;master&lt;/em&gt; will never merge, I wanted be certain that &lt;em&gt;master&lt;/em&gt; always reflected the current state of the Jekyll compiled website. Older, deleted files shouldn’t be left around. I simply just wipe out the files, copy in the new ones, and deploy (Git amazingly calculates neccessary deletes, adds, and edits correctly).&lt;/p&gt;
+
+&lt;h5 id=&quot;shell-script&quot;&gt;Shell Script&lt;/h5&gt;
+
+&lt;p&gt;The most significant optimization was to wrap most steps into a shell script. Here’s the current version of that script, although I expect it will evolve over time. &lt;a href=&quot;https://github.com/jordansirwin/jordansirwin.github.io/blob/source/_build/deploy.sh&quot;&gt;You can find the latest version of the script here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &quot;Compiling less&quot;
+lessc ../content/self/self.less \
+  &amp;gt; ../content/self/self.css
+
+echo &quot;Building _site&quot;
+jekyll build -s .. -d ../_site
+
+echo &quot;Deleting master&quot;
+find ../../master \
+  -regex &quot;.*/master/[^.].*&quot; \
+  -exec rm -rf {} \;
+
+echo &quot;Copying to master&quot;
+cp -r ../_site/ ../../master/
+
+echo &quot;Adding to git:master&quot;
+git --git-dir=../../master/.git \
+  --work-tree=../../master/ \
+  add --all
+
+echo &quot;Committing to git:master&quot;
+git --git-dir=../../master/.git \
+  --work-tree=../../master/ \
+  commit -am &quot;Deploying&quot;
+
+echo &quot;Pushing to github pages:master&quot;
+git --git-dir=../../master/.git \
+  --work-tree=../../master/ \
+  push origin master
+  
+echo &quot;Done!&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The script labels the various steps, but it’s important to remember that I execute it via the &lt;em&gt;source&lt;/em&gt; branch inside the source/_build folder. Because I’m in another branch and another folder, there’s two things to note in this script:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bash commands are given relative paths from source/_build to master.&lt;/li&gt;
+  &lt;li&gt;Git commands are using –git-dir and –work-tree to indicate operations are for the &lt;em&gt;master&lt;/em&gt; branch.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Because of this script I can write and commit as needed, then run a single shell command to compile, synchronize with &lt;em&gt;master&lt;/em&gt;, and deploy.&lt;/p&gt;
+
+&lt;h4 id=&quot;previewing&quot;&gt;Previewing&lt;/h4&gt;
+
+&lt;p&gt;Now that I can write and deploy, I realized the need to preview all of my changes (new content or website changes). Since my deploy script did everything I needed, I simply copied it and removed the steps relevant to deployment only. Here’s my test.sh shell script in current form:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &quot;Compiling less&quot;
+lessc ../content/self/self.less \
+  &amp;gt; ../content/self/self.css
+
+echo &quot;Building and Hosting _site&quot;
+jekyll serve \
+  --config ../_config.yml,../_config-dev.yml \
+  -w -s .. \
+  -d ../_site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Main differences from deploy.sh:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jekyll is called with the &lt;em&gt;serve&lt;/em&gt; argument instead of &lt;em&gt;build&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Does not copy to master, commit, or push to GitHub Pages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One I run this script, I can preview my blog just as it would look on GitHub Pages by visiting http://localhost:4000 in my browser.&lt;/p&gt;
+
+&lt;p&gt;Next Part: Custom DNS via Hover&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 20 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/</guid>
+      </item>
+    
+      <item>
         <title>Thoughts on D&amp;D 5e</title>
         <description>&lt;p&gt;Just over a week ago, Dungeons &amp;amp; Dragons 5th Edition (D&amp;amp;D 5e) launched. In addition to the Starter Set, Wizards has also released the &lt;a href=&quot;http://www.wizards.com/dnd/Article.aspx?x=dnd/basicrules&quot;&gt;Basic Rules&lt;/a&gt;- a free introductory subset of the rule system as PDF (a brilliant strategy to reduce barriers to entry). &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://www.jordanirwin.net/content/post_resources/dnd_logo.png&quot; alt=&quot;D&amp;amp;D Logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.jordanirwin.net/content/posts/2014-07-12-thoughts-on-dnd-5e/dnd_logo.png&quot; alt=&quot;D&amp;amp;D Logo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Over the Independence Day break, I ran a “one shot” game using the D&amp;amp;D 5e Basic Rules. Here’s my initial thoughts on that experience.&lt;/p&gt;
 
@@ -107,7 +242,7 @@
     
       <item>
         <title>Setting up this blog, Part 3</title>
-        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/&quot;&gt;Part 4&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Once I had my environment ready, I needed to actually create the blog. While blogs &lt;em&gt;can&lt;/em&gt; be a complex CMS, I didn’t want mine to be. I’m a fan of recent trends for &lt;em&gt;statically compiled websites&lt;/em&gt; and GitHub Pages natively supports &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;- it was an easy match.&lt;/p&gt;
 
@@ -147,7 +282,7 @@
     
       <item>
         <title>Setting up this blog, Part 2</title>
-        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/&quot;&gt;Part 4&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A great deal of time was spent getting my environment configured reasonably sane. By &lt;em&gt;environment&lt;/em&gt;, I mean:&lt;/p&gt;
 
@@ -204,7 +339,7 @@ git commit -m &quot;insert kewl comment here&quot;
     
       <item>
         <title>Setting up this blog, Part 1</title>
-        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/&quot;&gt;Part 4&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I think it’s proper that my first post on the new blogging system is about setting up the new blogging system. So meta, much wow.&lt;/p&gt;
 

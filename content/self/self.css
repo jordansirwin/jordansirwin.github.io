@@ -6267,10 +6267,6 @@ strong {
 .post h5 {
   color: #fefefe;
   margin-top: 30px;
-  margin-bottom: 10px;
-}
-.post p {
-  margin-bottom: 20px;
 }
 .post img {
   display: block;
@@ -6278,4 +6274,8 @@ strong {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+}
+.post p {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
