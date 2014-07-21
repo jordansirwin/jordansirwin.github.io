@@ -101,6 +101,6 @@ You can find more information about upcoming books and news at the [Official Dun
 
 [basic]: http://www.wizards.com/dnd/Article.aspx?x=dnd/basicrules
 [backgrounds]: http://www.wizards.com/dnd/Article.aspx?x=dnd/4ll/20140505
-[dndlogo]: {{ site.url }}/content/post_resources/dnd_logo.png
+[dndlogo]: {{ site.url }}/content/posts/2014-07-12-thoughts-on-dnd-5e/dnd_logo.png
 [bounded]: http://www.wizards.com/DnD/Article.aspx?x=dnd/4ll/20120604%EF%BB%BF
 [dnd]: http://www.wizards.com/dnd/

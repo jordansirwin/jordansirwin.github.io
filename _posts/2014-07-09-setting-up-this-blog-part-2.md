@@ -2,7 +2,7 @@
 title: Setting up this blog, Part 2
 ---
 
-Full Series: [Part 1][p1], [Part 2][p2], [Part 3][p3]
+Full Series: [Part 1][p1], [Part 2][p2], [Part 3][p3], [Part 4][p4]
 
 A great deal of time was spent getting my environment configured reasonably sane. By _environment_, I mean:
 
@@ -56,6 +56,7 @@ Next Part: [Jekyll and building the blog's HTML][p3].
 [p1]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-1 %}
 [p2]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-2 %}
 [p3]: {{ site.url }}{% post_url 2014-07-11-setting-up-this-blog-part-3 %}
+[p4]: {{ site.url }}{% post_url 2014-07-20-setting-up-this-blog-part-4 %}
 [2]: https://github.com/jordansirwin/jordansirwin.github.io
 [3]: http://www.sublimetext.com
 [4]: https://sublime.wbond.net

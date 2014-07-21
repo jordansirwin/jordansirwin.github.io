@@ -2,7 +2,7 @@
 title: Setting up this blog, Part 3
 ---
 
-Full Series: [Part 1][p1], [Part 2][p2], [Part 3][p3]
+Full Series: [Part 1][p1], [Part 2][p2], [Part 3][p3], [Part 4][p4]
 
 Once I had my environment ready, I needed to actually create the blog. While blogs _can_ be a complex CMS, I didn't want mine to be. I'm a fan of recent trends for _statically compiled websites_ and GitHub Pages natively supports [Jekyll][jekyll]- it was an easy match.
 
@@ -38,6 +38,7 @@ Next Part: Deploying to GitHub Pages.
 [p1]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-1 %}
 [p2]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-2 %}
 [p3]: {{ site.url }}{% post_url 2014-07-11-setting-up-this-blog-part-3 %}
+[p4]: {{ site.url }}{% post_url 2014-07-20-setting-up-this-blog-part-4 %}
 [jekyll]: http://jekyllrb.com
 [fmd]: http://jekyllrb.com/docs/configuration/#frontmatter-defaults
 [plugins]: http://jekyllrb.com/docs/plugins/
