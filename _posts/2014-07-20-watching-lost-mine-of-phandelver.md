@@ -4,9 +4,9 @@ title: Watching Lost Mine of Phandelver
 
 If you're interested in watching groups playing _Lost Mine of Phandelver_ from the D&D 5e Starter Set, here's some video series that are pretty good:
 
-[D&D Starter Set: Lost Mine of Phandelver Pt 1][dnd_dnd] from [Dungeons & Dragons][dnd]
-[RollPlay: One Shots - D&D 5.0 - Part 1][dnd_itmejp] from [itmeJP][itmejp]  
-[5th Edition D&D: The Mines of Phandelver - Part 1][dnd_quill18] from [quill18][]  
+* [D&D Starter Set: Lost Mine of Phandelver Pt 1][dnd_dnd] from [Dungeons & Dragons][dnd]  
+* [RollPlay: One Shots - D&D 5.0 - Part 1][dnd_itmejp] from [itmeJP][itmejp]  
+* [5th Edition D&D: The Mines of Phandelver - Part 1][dnd_quill18] from [quill18][]  
 
 [itmejp]: https://www.youtube.com/user/itmeJP
 [quill18]: https://www.youtube.com/channel/UCbx1TZgxfIauUZyPuBzEwZg
