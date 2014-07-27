@@ -4,7 +4,6 @@ title: D&D House Rule&#58; Skill Check Uncertainty
 
 This is part of the [D&D House Rules][house_rules] series.
 
-#### Skill Check Uncertainty ####
 
 It's difficult for players to not meta-game dice rolls (ie: Low rolls are assumed failure and high rolls success). To help avoid this belief, during many Skill Checks I secretely roll a d20 as well. If my roll is a Natural 20, then the player's result is reversed: Success = Failure, Failure = Success. 
 

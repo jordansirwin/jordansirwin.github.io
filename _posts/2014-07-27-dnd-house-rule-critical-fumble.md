@@ -5,8 +5,6 @@ title: D&D House Rule&#58; Critical Fumble
 This is part of the [D&D House Rules][house_rules] series.
 
 
-#### Critical Fumble ####
-
 A Natural 1 on any Combat or Skill Check is a Fumble. The player rolls another d20 to determine _how badly they fumbled_. High rolls generally represent no real threat or danger, rolls under 5 represent a setback of some kind, and a Natural 1 is a Critical Fumble that results in a major setback- maybe even pain and/or agony.
 
 ##### Example #####

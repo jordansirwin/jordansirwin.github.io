@@ -5,8 +5,6 @@ title: D&D House Rule&#58; Retrying a Skill Check
 This is part of the [D&D House Rules][house_rules] series.
 
 
-#### Retrying a Skill Check ####
-
 Sometimes a player fails a skill check and there's no good reason they can't just try again. Most systems allow the player to _Take 10_ or _Take 20_, which is an acceptable way to handle most scenarios. Otherwise, I allow the player check again with incrementing difficulty: Each failed check will increase the difficulty of the next check by the failure amount.
 
 ##### Example #####
