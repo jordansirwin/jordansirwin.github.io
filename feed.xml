@@ -7,6 +7,122 @@
     <atom:link href="http://www.jordanirwin.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>D&amp;D House Rules</title>
+        <description>&lt;p&gt;With D&amp;amp;D 5e launched and new campaigns firing up all around the globe, I thought I’d call out common house rules I like to use. These rules aren’t new or groundbreaking, and are heavily influenced from various systems I’ve played throughout my life. I simply enjoy playing games that have some flavor of these rules, so I apply them as neccessary.&lt;/p&gt;
+
+&lt;p&gt;Each rule will be its own post, so here’s a Master List:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jordanirwin.net/2014/07/27/dnd-house-rule-skill-check-uncertainty/&quot;&gt;Skill Check Uncertainty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jordanirwin.net/2014/07/27/dnd-house-rule-retrying-a-skill-check/&quot;&gt;Retrying a skill check&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jordanirwin.net/2014/07/27/dnd-house-rule-critical-fumble/&quot;&gt;Critical Fumble&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 27 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/07/27/dnd-house-rules/</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/27/dnd-house-rules/</guid>
+      </item>
+    
+      <item>
+        <title>D&amp;D House Rule&amp;#58; Skill Check Uncertainty</title>
+        <description>&lt;p&gt;This is part of the &lt;a href=&quot;http://www.jordanirwin.net/2014/07/27/dnd-house-rules/&quot;&gt;D&amp;amp;D House Rules&lt;/a&gt; series.&lt;/p&gt;
+
+&lt;h4 id=&quot;skill-check-uncertainty&quot;&gt;Skill Check Uncertainty&lt;/h4&gt;
+
+&lt;p&gt;It’s difficult for players to not meta-game dice rolls (ie: Low rolls are assumed failure and high rolls success). To help avoid this belief, during many Skill Checks I secretely roll a d20 as well. If my roll is a Natural 20, then the player’s result is reversed: Success = Failure, Failure = Success. &lt;/p&gt;
+
+&lt;p&gt;I don’t &lt;em&gt;always&lt;/em&gt; do this and it’s very subjective when I do- mainly when characters are attempting things with a natural element of uncertainly. Also, I frequently pre-roll a list of d20 results ahead of time and reference it instead of rolling real-time (expedited and even more secretive). If the player rolled a Natural 20 or Natural 1, I don’t do this.&lt;/p&gt;
+
+&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
+
+&lt;p&gt;Terg wants to check for signs of an ambush ahead. He rolls a Perception check and nails it with a 19 + 7 (26). This is an outstanding number, so generally the player expects correct information. My roll, though, was a Natural 20.&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Confident in his awareness, Terg is certain there is no ambush ahead. The party marches forward without much caution and pays for it with a suprise attack of wargs leaping from the woods!&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Terg overlooked a subtle paw track on the road, a fresh and clear sign of wargs ahead. Another player could have noticed the tracks, but Terg did not. &lt;/p&gt;
+
+&lt;p&gt;The point of this rule isn’t to undo a characters success, it’s to remind the players that they can’t assume their characters are right or wrong based on the dice rolls alone. Had Terg rolled a 3 and me a Natural 20, he may have concluded the same thing- but noticed the track at the last second before they marched on.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 27 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/07/27/dnd-house-rule-skill-check-uncertainty/</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/27/dnd-house-rule-skill-check-uncertainty/</guid>
+      </item>
+    
+      <item>
+        <title>D&amp;D House Rule&amp;#58; Retrying a Skill Check</title>
+        <description>&lt;p&gt;This is part of the &lt;a href=&quot;http://www.jordanirwin.net/2014/07/27/dnd-house-rules/&quot;&gt;D&amp;amp;D House Rules&lt;/a&gt; series.&lt;/p&gt;
+
+&lt;h4 id=&quot;retrying-a-skill-check&quot;&gt;Retrying a Skill Check&lt;/h4&gt;
+
+&lt;p&gt;Sometimes a player fails a skill check and there’s no good reason they can’t just try again. Most systems allow the player to &lt;em&gt;Take 10&lt;/em&gt; or &lt;em&gt;Take 20&lt;/em&gt;, which is an acceptable way to handle most scenarios. Otherwise, I allow the player check again with incrementing difficulty: Each failed check will increase the difficulty of the next check by the failure amount.&lt;/p&gt;
+
+&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
+
+&lt;p&gt;Seri is a stealthy rogue that’s found herself alone with a locked treasure chest. She attempts to pick the lock (DC 15), but fails with a 11 (failed by 4). Since the player is not in combat and skillfully stealthed her way into this postiion, there’s nothing stopping her from trying again. I allow another attempt, but now the DC is 19 (DC 15 + 4). &lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Seri recognises this kind of lock and is confident she should be able to pick it. Knowing she’s alone and unknown, she attempts to pick the lock again (DC 19).&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;The player rolls terribly, a 3 (failed by 16). Now, the difficulty to pick the lock is a whopping DC 35 (DC 19 + 16).&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Seri’s lockpick breaks off inside the lock and snaps loudly. You overhear someone asking “What was that?”.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Eventually, continued failures will identify the check as impossible or introduce new circumstances to the scenario (or both!).&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 27 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/07/27/dnd-house-rule-retrying-a-skill-check/</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/27/dnd-house-rule-retrying-a-skill-check/</guid>
+      </item>
+    
+      <item>
+        <title>D&amp;D House Rule&amp;#58; Skill Check Uncertainty</title>
+        <description>&lt;p&gt;This is part of the &lt;a href=&quot;http://www.jordanirwin.net/2014/07/27/dnd-house-rules/&quot;&gt;D&amp;amp;D House Rules&lt;/a&gt; series.&lt;/p&gt;
+
+&lt;h4 id=&quot;critical-fumble&quot;&gt;Critical Fumble&lt;/h4&gt;
+
+&lt;p&gt;A Natural 1 on any Combat or Skill Check is a Fumble. The player rolls another d20 to determine &lt;em&gt;how badly they fumbled&lt;/em&gt;. High rolls generally represent no real threat or danger, rolls under 5 represent a setback of some kind, and a Natural 1 is a Critical Fumble that results in a major setback- maybe even pain and/or agony.&lt;/p&gt;
+
+&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
+
+&lt;p&gt;Druber charges a goblin, but rolls a 1 on the attack roll. Knowing this is some kind of Fumble, he rolls another d20 resulting in a 13 (not a Critical Fumble).  &lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Druber’s charge is clumsy and off-balanced, making him look silly to those who may have seen it happen. Even the goblin laughs at him!&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;On his next turn, Druber attacks- again rolling a Natural 1. His second roll is also a Natural 1, representing a Critical Fumble. &lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Druber is so embarrassed by his charge that he over compensates his sword thrust- losing grip and flinging his weapon 10 feet forward. Additionally, he’s lost balance and fallen face down into the ground. Now he’s weaponless and prone!&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Had his second roll been 2-5 maybe he’d be weaponless or prone, but not both.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 27 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/07/27/dnd-house-rule-critical-fumble/</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/27/dnd-house-rule-critical-fumble/</guid>
+      </item>
+    
+      <item>
         <title>Watching Lost Mine of Phandelver</title>
         <description>&lt;p&gt;If you’re interested in watching groups playing &lt;em&gt;Lost Mine of Phandelver&lt;/em&gt; from the D&amp;amp;D 5e Starter Set, here’s some video series that are pretty good:&lt;/p&gt;
 
@@ -389,84 +505,6 @@ git commit -m &quot;insert kewl comment here&quot;
         <pubDate>Wed, 09 Jul 2014 00:00:00 -0700</pubDate>
         <link>http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/</link>
         <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/</guid>
-      </item>
-    
-      <item>
-        <title>Listening</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;If you catch yourself thinking about your response, you are not listening.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://leadersinheels.com/career/10-tips-on-becoming-a-connected-listener/&quot;&gt;Source: 10 tips on becoming a connected listener&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 16 May 2014 00:00:00 -0700</pubDate>
-        <link>http://www.jordanirwin.net/2014/05/16/listening/</link>
-        <guid isPermaLink="true">http://www.jordanirwin.net/2014/05/16/listening/</guid>
-      </item>
-    
-      <item>
-        <title>Apple TV Speculation</title>
-        <description>&lt;p&gt;With years of speculation on Apple’s plan for “reinventing the television”, I figure it’s time for me to increase the noise.&lt;/p&gt;
-
-&lt;p&gt;My Apple TV Prediction In Bullets For Guided Reading:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;No significant changes to the existing Apple TV (other than boosted hardware specs).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Overhaul to the existing UI, primarily to accommodate my actual prediction in the next point…&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A new, psuedo-optional, remote that’s a striped down iPod Touch. This “iRemote” is simply a thin client for the Apple TV, offering:
-    &lt;ul&gt;
-      &lt;li&gt;Apple TV navigation mirrored on the iRemote. (This is the primary, and significant, difference from the existing Remote App)&lt;/li&gt;
-      &lt;li&gt;Text inputs trigger the iOS onscreen keyboard.&lt;/li&gt;
-      &lt;li&gt;Apps can generate any kind of digital input device they want (game controllers!) on the entire screen of the iRemote. Generic controls available by default, including the existing Remote App controls.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Apple TV continues to cost only $99, but without the iRemote.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;iRemote bought separately for $99.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;All existing iOS devices are iRemotes via an updated Remote App.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Existing Apple TVs are backwards compatible with the iRemote via a software update.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;With a plan like this, Apple could potentially dominate the television market without actually entering the television market. Who cares what TV you bought or where you got it from, just add on the Apple TV for your entertainment needs!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;edit: Clarified that default controls would be provided for backwards compatibility. Custom controls are optional, not required.&lt;/em&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 21 Aug 2013 00:00:00 -0700</pubDate>
-        <link>http://www.jordanirwin.net/2013/08/21/apple-tv-speculation/</link>
-        <guid isPermaLink="true">http://www.jordanirwin.net/2013/08/21/apple-tv-speculation/</guid>
-      </item>
-    
-      <item>
-        <title>Hello World, again.</title>
-        <description>&lt;p&gt;Here we go again…&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;HereWeGoAgain.ConsoleApp&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Program&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Hello World, again.&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Tue, 25 Jun 2013 00:00:00 -0700</pubDate>
-        <link>http://www.jordanirwin.net/2013/06/25/hello-world-again/</link>
-        <guid isPermaLink="true">http://www.jordanirwin.net/2013/06/25/hello-world-again/</guid>
       </item>
     
   </channel>
