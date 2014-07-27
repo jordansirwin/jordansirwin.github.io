@@ -1,5 +1,5 @@
 ---
-title: D&D House Rule&#58; Skill Check Uncertainty
+title: D&D House Rule&#58; Critical Fumble
 ---
 
 This is part of the [D&D House Rules][house_rules] series.
