@@ -42,12 +42,12 @@ layout:
       {% if page.sitemap.changefreq %}
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>
       {% else %}
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
       {% endif %}
       {% if page.sitemap.priority %}
         <priority>{{ page.sitemap.priority }}</priority>
       {% else %}
-        <priority>0.3</priority>
+        <priority>0.4</priority>
       {% endif %}
     </url>
     {% endunless %}
