@@ -11,3 +11,8 @@ Setting up this blog
 * Drafts
 * Kuler
 * Environments (_config-dev.yml)
+
+
+
+Open Graph Tags inspired by:
+http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/ 
