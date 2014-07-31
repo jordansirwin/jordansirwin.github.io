@@ -17,7 +17,7 @@
     <meta property="og:description"
           content="{{ page.excerpt | strip_html | trim }}" >
     <meta property="og:url"
-          content="{{ site.url }}" >
+          content="{{ site.url }}{{ page.url }}" >
 
     <meta property="article:published_time"
           content="{{ page.date | date_to_xmlschema }}" >
@@ -31,7 +31,7 @@
     <meta property="og:description"
           content="{{ site.description }}" >
     <meta property="og:url"
-          content="{{ site.url }}{{ page.url }}" >
+          content="{{ site.url }}" >
   {% endif %}
 
     <meta name="viewport" 
