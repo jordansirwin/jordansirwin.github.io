@@ -1,6 +1,6 @@
 echo "Compiling less"
-lessc ../content/self/self.less \
-  > ../content/self/self.css
+lessc ../content/self/self.less -x \
+  > ../content/self/self.min.css
 
 echo "Building _site"
 jekyll build -s .. -d ../_site

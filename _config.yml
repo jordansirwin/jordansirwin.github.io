@@ -1,6 +1,7 @@
 # site settings
 author: "Jordan Irwin"
 baseurl: 
+self-css: self.min.css
 description: "Thoughts, rants, tips, tricks, stories, truths, and lies."
 highlighter: pygments
 permalink: pretty
