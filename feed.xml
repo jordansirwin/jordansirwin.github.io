@@ -7,6 +7,22 @@
     <atom:link href="http://www.jordanirwin.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>How Gary Gygax Lost Control of Dungeons &amp; Dragons</title>
+        <description>&lt;blockquote&gt;
+
+  &lt;p&gt;In only ninety minutes, Gygax watched control of TSR transfer to a non-gamer.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@increment/the-ambush-at-sheridan-springs-3a29d07f6836&quot;&gt;A very detailed history of Gary Gygax and the founding (and dismantle) of TSR&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/docetist&quot;&gt;Jon Peterson&lt;/a&gt;, “An author investigating the history of wargames and role-playing games.”&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 04 Aug 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/08/04/how-gary-gygax-lost-control-of-dungeons-and-dragons/</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/08/04/how-gary-gygax-lost-control-of-dungeons-and-dragons/</guid>
+      </item>
+    
+      <item>
         <title>D&amp;D House Rules</title>
         <description>&lt;p&gt;With D&amp;amp;D 5e launched and new campaigns firing up all around the globe, I thought I’d call out common house rules I like to use. These rules aren’t new or groundbreaking, and are heavily influenced from various systems I’ve played throughout my life. I simply enjoy playing games that have some flavor of these rules, so I apply them as neccessary.&lt;/p&gt;
 
@@ -461,44 +477,6 @@ git commit -m &quot;insert kewl comment here&quot;
         <pubDate>Wed, 09 Jul 2014 00:00:00 -0700</pubDate>
         <link>http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/</link>
         <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/</guid>
-      </item>
-    
-      <item>
-        <title>Setting up this blog, Part 1</title>
-        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/&quot;&gt;Part 4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I think it’s proper that my first post on the new blogging system is about setting up the new blogging system. So meta, much wow.&lt;/p&gt;
-
-&lt;p&gt;Here were my goals:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Avoid WYSIWYG.&lt;/li&gt;
-  &lt;li&gt;Learn something new and relevant.&lt;/li&gt;
-  &lt;li&gt;Content must be reasonably exportable.&lt;/li&gt;
-  &lt;li&gt;Writing should be as exciting as the content.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;With these goals in mind, I’ve switched away from Blogger and onto GitHub Pages. But not &lt;em&gt;just&lt;/em&gt; GitHub Pages, a full technology stack of goodness to learn and explore with it:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sublime for writing.&lt;/li&gt;
-  &lt;li&gt;Markdown for markup.&lt;/li&gt;
-  &lt;li&gt;Jekyll for static compilation.&lt;/li&gt;
-  &lt;li&gt;Git for source control.&lt;/li&gt;
-  &lt;li&gt;GitHub Pages for hosting.&lt;/li&gt;
-  &lt;li&gt;Hover for domain registration.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Additionally, I’ve dedicated myself to doing it the &lt;em&gt;hard way&lt;/em&gt; via command line- so I’ve been forced to learn a great deal more about OSX, Terminal, and Unix Commands. &lt;/p&gt;
-
-&lt;p&gt;In the interest of finishing a post, I’m going to break this into multiple parts. &lt;/p&gt;
-
-&lt;p&gt;Next Part: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Setting up my environment&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 09 Jul 2014 00:00:00 -0700</pubDate>
-        <link>http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/</link>
-        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/</guid>
       </item>
     
   </channel>
