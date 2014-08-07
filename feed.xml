@@ -7,6 +7,17 @@
     <atom:link href="http://www.jordanirwin.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Value was either too large or too small for a UInt32.</title>
+        <description>&lt;p&gt;Useless error message in Visual Studio when committing code into TFS that hasn’t been compiled. It’s both uninformative and completely disconnected from the problem.&lt;/p&gt;
+
+&lt;p&gt;While I agree that commiting uncompiled code into source control isn’t a good practice, I also believe a reasonable error message to identify the problem is too.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Aug 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/08/06/value-was-either-too-large-or-too-small/</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/08/06/value-was-either-too-large-or-too-small/</guid>
+      </item>
+    
+      <item>
         <title>How Gary Gygax Lost Control of Dungeons &amp; Dragons</title>
         <description>&lt;blockquote&gt;
 
@@ -420,63 +431,6 @@ jekyll serve \
         <pubDate>Fri, 11 Jul 2014 00:00:00 -0700</pubDate>
         <link>http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/</link>
         <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/</guid>
-      </item>
-    
-      <item>
-        <title>Setting up this blog, Part 2</title>
-        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/&quot;&gt;Part 4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A great deal of time was spent getting my environment configured reasonably sane. By &lt;em&gt;environment&lt;/em&gt;, I mean:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Directory structure.&lt;/li&gt;
-  &lt;li&gt;Git.&lt;/li&gt;
-  &lt;li&gt;Writing.&lt;/li&gt;
-  &lt;li&gt;Previewing.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;directory-structure&quot;&gt;Directory Structure&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jordansirwin/jordansirwin.github.io&quot;&gt;My directory structure can be viewed on GitHub&lt;/a&gt; (this blog and its source is wide-open for your review). I went through a few iterations, and may still go through more, but it’s a fairly standard structure for GitHub Pages + Jekyll.&lt;/p&gt;
-
-&lt;h4 id=&quot;git&quot;&gt;Git&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages has great documentation available&lt;/a&gt;, but it wasn’t a silver bullet. GitHub Pages requires at least two branches: One to host the blog itself and one to store the source code for generating the blog. GitHub Pages respects a magical branch called &lt;em&gt;gh-pages&lt;/em&gt; or the &lt;em&gt;master&lt;/em&gt; branch. I chose to go with &lt;em&gt;master&lt;/em&gt; for hosting and &lt;em&gt;source&lt;/em&gt; for the source code. Admittedly, I didn’t get this right at first (or second, third, or tenth). &lt;/p&gt;
-
-&lt;p&gt;Since I already had some source code in the &lt;em&gt;master&lt;/em&gt; branch, I needed to change things around. I created a new branch for the source code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git branch source --orphan
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then, I needed to cleanup my &lt;em&gt;master&lt;/em&gt; branch of everything but the &lt;em&gt;.git&lt;/em&gt; folder (well, anything that doesn’t start with a period (.):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -regex &quot;\./[^.].*&quot; -exec rm -rf {} \;
-git commit -m &quot;insert kewl comment here&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now I have a clean &lt;em&gt;master&lt;/em&gt; and a fully loaded &lt;em&gt;source&lt;/em&gt;. I’ll never do anything directly in the &lt;em&gt;master&lt;/em&gt; branch. Everything will be done in &lt;em&gt;source&lt;/em&gt;, then deployed (&lt;strong&gt;NOT&lt;/strong&gt; merged!) to &lt;em&gt;master&lt;/em&gt;. These two branches will never merge together again. &lt;/p&gt;
-
-&lt;h4 id=&quot;writing&quot;&gt;Writing&lt;/h4&gt;
-
-&lt;p&gt;Deciding what to write with was easy, &lt;a href=&quot;http://www.sublimetext.com&quot;&gt;Sublime&lt;/a&gt;. Cross-platform, settings configured via JSON files, great plugin support, and sports a minimal UI- I love it. I currently use &lt;a href=&quot;https://github.com/jordansirwin/dotfiles/tree/master/sublime&quot;&gt;pretty basic settings&lt;/a&gt; and only two plugins: &lt;a href=&quot;https://sublime.wbond.net&quot;&gt;Package Control&lt;/a&gt; for installing packages (plugins) and &lt;a href=&quot;https://sublime.wbond.net/packages/Markdown%20Preview&quot;&gt;Markdown Preview&lt;/a&gt; for lovely Markdown syntax highlights.&lt;/p&gt;
-
-&lt;h4 id=&quot;previewing&quot;&gt;Previewing&lt;/h4&gt;
-
-&lt;p&gt;As mentioned above, Markdown Preview offers some nice Markdown enhancements- including previewing via your browser. While I do use this feature when writing notes or other Markdown based documents, this blog is previewed via Jekyll for an identical match to the final product. &lt;/p&gt;
-
-&lt;p&gt;To setup a local copy of the blog at &lt;em&gt;http://localhost:4000&lt;/em&gt; and automatically update modified files for real-time previewing, I use this command line from my &lt;em&gt;source&lt;/em&gt; branch:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;jekyll serve -w
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I use Safari to browse the URL and refresh as I want to preview changes.&lt;/p&gt;
-
-&lt;p&gt;Next Part: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Jekyll and building the blog’s HTML&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 09 Jul 2014 00:00:00 -0700</pubDate>
-        <link>http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/</link>
-        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/</guid>
       </item>
     
   </channel>
