@@ -8,9 +8,9 @@
     
       <item>
         <title>Value was either too large or too small for a UInt32</title>
-        <description>&lt;p&gt;Useless error message in Visual Studio when committing code into TFS that hasn’t been compiled. It’s both uninformative and completely disconnected from the problem.&lt;/p&gt;
+        <description>&lt;p&gt;Useless error message in Visual Studio when committing code into TFS that hasn’t been saved. It’s both uninformative and completely disconnected from the problem.&lt;/p&gt;
 
-&lt;p&gt;While I agree that commiting uncompiled code into source control isn’t a good practice, I also believe a reasonable error message to identify the problem is too.&lt;/p&gt;
+&lt;p&gt;While I agree that commiting unsaved code into source control should be prevented, I also believe a reasonable error message to identify the problem is too.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 00:00:00 -0700</pubDate>
         <link>http://www.jordanirwin.net/2014/08/06/value-was-either-too-large-or-too-small/</link>
