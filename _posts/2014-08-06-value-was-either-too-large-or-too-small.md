@@ -1,5 +1,5 @@
 ---
-title: Value was either too large or too small for a UInt32.
+title: Value was either too large or too small for a UInt32
 tags:
 - programming
 ---
