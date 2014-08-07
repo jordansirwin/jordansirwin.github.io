@@ -7,7 +7,7 @@
     <atom:link href="http://www.jordanirwin.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Value was either too large or too small for a UInt32.</title>
+        <title>Value was either too large or too small for a UInt32</title>
         <description>&lt;p&gt;Useless error message in Visual Studio when committing code into TFS that hasn’t been compiled. It’s both uninformative and completely disconnected from the problem.&lt;/p&gt;
 
 &lt;p&gt;While I agree that commiting uncompiled code into source control isn’t a good practice, I also believe a reasonable error message to identify the problem is too.&lt;/p&gt;
