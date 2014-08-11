@@ -7,6 +7,52 @@
     <atom:link href="http://www.jordanirwin.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>The Low Status of Software Engineers</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://michaelochurch.wordpress.com/about/&quot;&gt;Michael O. Church’s&lt;/a&gt; intriguing article exploring the low status of software engineers to upper management. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://michaelochurch.wordpress.com/2014/07/13/how-the-other-half-works-an-adventure-in-the-low-status-of-software-engineers/&quot;&gt;How the Other Half Works: an Adventure in the Low Status of Software Engineers&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A few fun tidbits:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;… for a point that I’ll come back to, software engineers lack the social status necessary to make others invest in them.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;And…&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;For a software engineer, “relocation” is usually some shitty $3,000 lump-sum package, because “software engineer”, to executives, means “22-year-old clueless male with few possessions, and with free storage of the parental category”. On the other hand, if you’re a manager, you might be seen as a real human being with actual concerns about relocating to another part of the country.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;And…&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;What most of us don’t realize is that this culture of mandatory “passion” lowers our social status, because it encourages us to work unreasonably hard and irrespective of conditions. The fastest way to lose social status is to show acceptance of low social status.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Finally…&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;If programmers want to be taken seriously, and we should be taken seriously and we certainly should want this, we’re going to have to take stock of our compromised position and fix it, even if that’s “getting political”. We’re going to have to stop glorifying pointless self-sacrifice for what is ultimately someone else’s business transaction, and start asserting ourselves and our values. &lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Go read it yourself. Please. You deserve it.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 10 Aug 2014 00:00:00 -0700</pubDate>
+        <link>http://www.jordanirwin.net/2014/08/10/the-low-status-of-software-engineers/</link>
+        <guid isPermaLink="true">http://www.jordanirwin.net/2014/08/10/the-low-status-of-software-engineers/</guid>
+      </item>
+    
+      <item>
         <title>Value was either too large or too small for a UInt32</title>
         <description>&lt;p&gt;Useless error message in Visual Studio when committing code into TFS that hasn’t been saved. It’s both uninformative and completely disconnected from the problem.&lt;/p&gt;
 
@@ -391,46 +437,6 @@ jekyll serve \
         <pubDate>Sat, 12 Jul 2014 00:00:00 -0700</pubDate>
         <link>http://www.jordanirwin.net/2014/07/12/thoughts-on-dnd-5e/</link>
         <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/12/thoughts-on-dnd-5e/</guid>
-      </item>
-    
-      <item>
-        <title>Setting up this blog, Part 3</title>
-        <description>&lt;p&gt;Full Series: &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/&quot;&gt;Part 2&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/&quot;&gt;Part 3&lt;/a&gt;, &lt;a href=&quot;http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/&quot;&gt;Part 4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Once I had my environment ready, I needed to actually create the blog. While blogs &lt;em&gt;can&lt;/em&gt; be a complex CMS, I didn’t want mine to be. I’m a fan of recent trends for &lt;em&gt;statically compiled websites&lt;/em&gt; and GitHub Pages natively supports &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;- it was an easy match.&lt;/p&gt;
-
-&lt;h4 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h4&gt;
-
-&lt;p&gt;I initially used GitHub Pages’ automatic Jekyll compilation, but quickly switched to local compilation to take advantage of newer features (at the time of writing, GitHub runs Jekyll v1.5.1 while v2.1.1 is available). The features I wanted to use were: &lt;a href=&quot;http://jekyllrb.com/docs/configuration/#frontmatter-defaults&quot;&gt;Frontmatter Defaults&lt;/a&gt; and &lt;a href=&quot;http://jekyllrb.com/docs/plugins/&quot;&gt;Plugins&lt;/a&gt; (although I don’t actually use any plugins yet). I disabled GitHub’s by adding an empty &lt;em&gt;.nojekyll&lt;/em&gt; file to the root of my &lt;em&gt;source&lt;/em&gt; branch. &lt;/p&gt;
-
-&lt;p&gt;To get started on the blog, I created a single HTML page representing the landing page. I wanted a minimal look, drawing focus directly to the content. To help visualize, I hacked in some fake posts to have content to work with. I grabbed &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt; for grid layout and theming. Of course, creating a webpage layout and styling didn’t &lt;em&gt;just happen&lt;/em&gt;, I spent hours across days fine tuning it into something I was happy with.&lt;/p&gt;
-
-&lt;p&gt;With a structure in place, I needed to get posts to dynamically show instead of being hardcoded. Jekyll uses Liquid Templates to handle dynamic behavior. Here’s a snippet of the loop I used:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{% for post in site.posts limit: 10 %}
-&amp;lt;div class=&quot;post well&quot;&amp;gt;
-  &amp;lt;small&amp;gt;{{ post.date | date: &quot;%B %-d, %Y&quot;}}&amp;lt;/small&amp;gt;
-  &amp;lt;h3&amp;gt;&amp;lt;a href=&quot;{{ post.url }}&quot;&amp;gt;{{ post.title }}&amp;lt;/a&amp;gt;&amp;lt;/h3&amp;gt;
-  {{ post.content }}
-&amp;lt;/div&amp;gt;
-{% endfor %}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;With the above block, I now had a webpage that could dynamically load the latest 10 posts. Jekyll expects posts to be in a folder named &lt;em&gt;_posts&lt;/em&gt; and &lt;a href=&quot;http://jekyllrb.com/docs/posts/&quot;&gt;named in a specific way&lt;/a&gt;. I then migrated a few posts from the old blog system using &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; for content layout (&lt;a href=&quot;https://github.com/jordansirwin/jordansirwin.github.io/tree/source/_posts&quot;&gt;see my &lt;em&gt;_posts&lt;/em&gt; folder on GitHub&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Now I had a website and some content, but for Liquid to dynamically load posts I needed to &lt;em&gt;compile&lt;/em&gt; the website into a static page. Jekyll makes it easy!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;jekyll build
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Boom. This created a &lt;em&gt;_site&lt;/em&gt; folder with the compiled HTML ready to go. Wait, go where?&lt;/p&gt;
-
-&lt;p&gt;Next Part: Deploying to GitHub Pages.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 11 Jul 2014 00:00:00 -0700</pubDate>
-        <link>http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/</link>
-        <guid isPermaLink="true">http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/</guid>
       </item>
     
   </channel>
