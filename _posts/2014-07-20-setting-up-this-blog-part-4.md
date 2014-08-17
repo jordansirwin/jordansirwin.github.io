@@ -122,10 +122,10 @@ One I run this script, I can preview my blog just as it would look on GitHub Pag
 Next Part: Custom DNS via Hover
 
 
-[p1]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-1 %}
-[p2]: {{ site.url }}{% post_url 2014-07-09-setting-up-this-blog-part-2 %}
-[p3]: {{ site.url }}{% post_url 2014-07-11-setting-up-this-blog-part-3 %}
-[p4]: {{ site.url }}{% post_url 2014-07-20-setting-up-this-blog-part-4 %}
-[folders]: {{ site.url }}/content/posts/2014-07-20-setting-up-this-blog-part-4/branch_folders.jpg
+[p1]: {% post_url 2014-07-09-setting-up-this-blog-part-1 %}
+[p2]: {% post_url 2014-07-09-setting-up-this-blog-part-2 %}
+[p3]: {% post_url 2014-07-11-setting-up-this-blog-part-3 %}
+[p4]: {% post_url 2014-07-20-setting-up-this-blog-part-4 %}
+[folders]: /content/posts/2014-07-20-setting-up-this-blog-part-4/branch_folders.jpg
 [ghpages]: https://pages.github.com
 [script]: https://github.com/jordansirwin/jordansirwin.github.io/blob/source/_build/deploy.sh
