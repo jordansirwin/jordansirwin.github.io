@@ -65,13 +65,13 @@
   <small>July 20, 2014</small>
   <h3><a href="/2014/07/20/setting-up-this-blog-part-4/">Setting up this blog, Part 4</a></h3>
 
-  <p>Full Series: <a href="http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-1/">Part 1</a>, <a href="http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/">Part 2</a>, <a href="http://www.jordanirwin.net/2014/07/11/setting-up-this-blog-part-3/">Part 3</a>, <a href="http://www.jordanirwin.net/2014/07/20/setting-up-this-blog-part-4/">Part 4</a></p>
+  <p>Full Series: <a href="/2014/07/09/setting-up-this-blog-part-1/">Part 1</a>, <a href="/2014/07/09/setting-up-this-blog-part-2/">Part 2</a>, <a href="/2014/07/11/setting-up-this-blog-part-3/">Part 3</a>, <a href="/2014/07/20/setting-up-this-blog-part-4/">Part 4</a></p>
 
 <p>Deploying and hosting the blog to GitHub Pages turned out to be a larger task than I anticipated. Not because it’s a complicated matter, but because I was initially confused and stuborn about how I wanted to handle it.</p>
 
 <h4 id="deploying">Deploying</h4>
 
-<p><a href="http://www.jordanirwin.net/2014/07/09/setting-up-this-blog-part-2/">As I mentioned before</a>, I’m using GitHub Pages <em>User Pages</em> instead the <em>Project Pages</em> since this will be a personal website instead of a product/project specific site. This means that the <em>master</em> branch represents the internet facing website (instead of a branch named <em>gh_pages</em>). I created a second branch called <em>source</em> that I use for writing and development.</p>
+<p><a href="/2014/07/09/setting-up-this-blog-part-2/">As I mentioned before</a>, I’m using GitHub Pages <em>User Pages</em> instead the <em>Project Pages</em> since this will be a personal website instead of a product/project specific site. This means that the <em>master</em> branch represents the internet facing website (instead of a branch named <em>gh_pages</em>). I created a second branch called <em>source</em> that I use for writing and development.</p>
 
 <p>Considering these facts:</p>
 
@@ -111,7 +111,7 @@
 
 <p>To remove the “hassle” of switching between <em>source</em> and <em>master</em> during deployments, I’ve chosen to keep them both checked out into their own folders. I did this by having two clones of my blog, one stays in <em>master</em> and the other stays in <em>source</em>.</p>
 
-<p><img src="http://www.jordanirwin.net/content/posts/2014-07-20-setting-up-this-blog-part-4/branch_folders.jpg" alt="Branch Folders" /></p>
+<p><img src="/content/posts/2014-07-20-setting-up-this-blog-part-4/branch_folders.jpg" alt="Branch Folders" /></p>
 
 <p>This also solved another problem I was struggling with: Cleaning up the <em>master</em> branch of old files. I couldn’t find a satisfying way to remove existing files from the <em>master</em> branch without removing important things like .git, .gitignore, etc… While likely not the best solution, here’s the command I came up with for cleaning up (it’s executed from the <em>source</em> branch folder, hence the pathing): </p>
 

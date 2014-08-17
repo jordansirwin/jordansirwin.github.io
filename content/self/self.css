@@ -6274,6 +6274,7 @@ strong {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  max-width: 100%;
 }
 .post p {
   margin-bottom: 15px;
