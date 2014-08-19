@@ -9,8 +9,10 @@ _Here lies actual accounts of fictional events. Spoilers exists if you haven't y
 ![Lost Mines][img_lost_mines]
 
 
-* Part 1: [A Dwarf, a Halfling, and a Human are sitting in a bar][p1] 
+* Part 1: [A dwarf, a halfling, and a human are sitting in a bar][p1] 
+* Part 2: [The horses haven't been dead long][p2] 
 
 
 [img_lost_mines]: \content\posts\2014-08-17-lost-mine-of-phandelver\lost-mines.jpg
 [p1]: {% post_url 2014-08-17-a-dwarf-halfling-and-human-are-sitting-in-a-bar %}
+[p2]: {% post_url 2014-08-18-the-horses-havent-been-dead-long %}
