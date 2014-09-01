@@ -9,6 +9,9 @@ name: "JordanIrwin.net"
 url: http://www.jordanirwin.net
 useAnalytics: true
 
+gems:
+  - jekyll-redirect-from
+
 # meta tag for "keywords"
 keywords:
   - geek
