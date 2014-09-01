@@ -1,8 +1,10 @@
 ---
 date: 20140817000100
 title: A dwarf, a halfling, and a human are sitting in a bar
+part_number: 1
 tags:
 - d&d
+- lost-mine-of-phadelver-campaign
 ---
 
 _Part 1 of Lost Mine of Phandelver. [The full series may be found here][series]. Here lies actual accounts of fictional events. Spoilers exists if you haven't yet played this adventure._

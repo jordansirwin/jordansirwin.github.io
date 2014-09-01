@@ -1,7 +1,9 @@
 ---
 title: The horses haven't been dead long
+part_number: 2
 tags:
 - d&d
+- lost-mine-of-phadelver-campaign
 ---
 
 _Part 2 of Lost Mine of Phandelver. [The full series may be found here][series]. Here lies actual accounts of fictional events. Spoilers exists if you haven't yet played this adventure._

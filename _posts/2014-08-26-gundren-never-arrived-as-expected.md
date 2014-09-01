@@ -1,7 +1,9 @@
 ---
 title: Gundren never arrived as expected
+part_number: 3
 tags:
 - d&d
+- lost-mine-of-phadelver-campaign
 ---
 
 _Part 3 of Lost Mine of Phandelver. [The full series may be found here][series]. Here lies actual accounts of fictional events. Spoilers exists if you haven't yet played this adventure._
