@@ -46,7 +46,7 @@
 
 &lt;blockquote&gt;
 
-  &lt;p&gt;“Why would you use an interface instead of a class?”&lt;/p&gt;
+  &lt;p&gt;“Why would you use an interface instead of an abstract or inherited class?”&lt;/p&gt;
 
 &lt;/blockquote&gt;
 
