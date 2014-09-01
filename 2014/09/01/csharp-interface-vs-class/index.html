@@ -71,9 +71,17 @@
 
 <hr />
 
-<p>Recently, a colleague asked me what the difference between an interface and a class was. What was really being asked was “why would you use an interface instead of a class?”. After reassuring them that it wasn’t a stupid question (I’m willing to bet most developers have pondered this very question- I did), I went into a long explanation full of lousy examples and bad analogies. I think I was able to make a good case for using interfaces, but just to be sure I’ve decided to add more noise to the Internet.</p>
+<p>Recently, a colleague asked me what the difference between an interface and a class was. What was really being asked was </p>
 
-<p>If your not familiar with the basics of an interface, I recommend a quick detour to MSDN for an overview. Maybe if you’re lucky, you’ll completely understand them and won’t have to continue reading my attempt to explain them.</p>
+<blockquote>
+
+  <p>“Why would you use an interface instead of a class?”</p>
+
+</blockquote>
+
+<p>After reassuring them that it wasn’t a stupid question (I’m willing to bet most developers have pondered this very question- I did), I went into a long explanation full of lousy examples and bad analogies. I think I was able to make a good case for using interfaces, but just to be sure I’ve decided to add more noise to the Internet.</p>
+
+<p>If you’re not familiar with the basics of an interface, I recommend a quick detour to <a href="http://msdn.microsoft.com/en-us/library/ms173156.aspx">MSDN</a> for an overview. Maybe if you’re lucky, you’ll completely understand and won’t continue reading my attempt to explain them.</p>
 
 <p>In a nutshell- an interface is a set of rules. It regulates its consumer by enforcing that certain methods, delegates, and/or events must be defined. Clear as mud, right? Let’s try an example, followed by a bad car analogy if you’re not so lucky.</p>
 
@@ -127,7 +135,7 @@
       <span class="p">}</span>
     <span class="p">}</span></code></pre></div>
 
-<p>In case the comments weren’t enough, let me explain this example in depth. The class, Foo, desires only one thing: “to do interesting things”. It’s entire purpose in life is to perform “interesting things”, regardless of what they are, who they’re from, what side-effects they have, how to do them, etc… Foo simply doesn’t care about any of the details. This is accomplished via the interface IFooCanUseMeNow.</p>
+<p>In case the comments weren’t enough, let me explain this example in depth. The class, Foo, desires only one thing: “to do interesting things”. Its entire purpose in life is to perform “interesting things”, regardless of what they are, who they’re from, what side-effects they have, how to do them, etc… Foo simply doesn’t care about the details. This is accomplished via the interface IFooCanUseMeNow.</p>
 
 <p>IFooCanUseMeNow has one rule: “in order to use me, you must implement a method called DoSomething that accepts no parameters and returns no values.” Pretty straight forward (I hope). Foo has a method called DoSomethingInteresting which accepts any object that implements IFooCanUseMeNow. Since all objects that implement IFooCanUseMeNow must (because of the rules) have a method called DoSomething, this means that Foo can invoke this method.</p>
 
@@ -241,7 +249,7 @@
       <span class="c1">// base for all people</span>
     <span class="p">}</span></code></pre></div>
 
-<p>In this example, it should be more apparent why using a class is not a good approach. For those that don’t know, or forgot, C# allows as many interfaces as needed to be implemented, but only allows one class to be inherited. With this more complex example, each of the “interesting classes” already inherit their base class, so they wouldn’t be able to inherit the FooCanUseMeNow class. Of course, you could have the low level abstract classes inherit FooCanUseMeNow, but that’s more or less hacking out a solution (just because Bartender and Barber can DoSomething, it doesn’t mean that some other Person can as well).</p>
+<p>In this example, it should be more apparent why using a class is not a good approach. Remember, C# allows as many interfaces as needed to be implemented but only allows one class to be inherited. With this more complex example, each of the “interesting classes” already inherit their base class, so they wouldn’t be able to inherit the FooCanUseMeNow class. Of course, you could have the low level abstract classes inherit FooCanUseMeNow, but that’s more or less hacking out a solution (just because Bartender and Barber can DoSomething, it doesn’t mean that some other Person can as well).</p>
 
 <p>If you have understood everything thus far, then your imagination should be going wild with thoughts about past projects and examples of when you could have used interfaces. This example is just the tip of the iceberg. When fully understood, entire frameworks can be developed around interfaces- making them extensible and fluid. Nearly every problem can be solved with an interface, so I challenge you to try them out on your next one. I’m not suggesting that you go crazy here- I’m just suggesting that you find a way to use at least one interface to try it out. I think you’ll be satisfied with the outcome.</p>
 
