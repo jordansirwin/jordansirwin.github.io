@@ -16,7 +16,7 @@ Originally posted: March 11, 2009
 Recently, a colleague asked me what the difference between an interface and a class was. Here's what was really being asked:
 
 >
-“Why would you use an interface instead of a class?”
+“Why would you use an interface instead of an abstract or inherited class?”
 > 
 
 After reassuring them that it wasn’t a stupid question (I’m willing to bet most developers have pondered this very question- I did), I went into a long explanation full of lousy examples and bad analogies. I think I was able to make a good case for using interfaces, but just to be sure I’ve decided to add more noise to the Internet.
