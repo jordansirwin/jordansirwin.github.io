@@ -13,7 +13,7 @@ Originally posted: March 11, 2009
 ---
 
 
-Recently, a colleague asked me what the difference between an interface and a class was. What was really being asked was 
+Recently, a colleague asked me what the difference between an interface and a class was. Here's what was really being asked:
 
 >
 “Why would you use an interface instead of a class?”
