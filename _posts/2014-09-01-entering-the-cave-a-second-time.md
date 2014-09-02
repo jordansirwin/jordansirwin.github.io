@@ -22,7 +22,7 @@ At the bottom, Gosef grabs the rope and begins his climb. Unfortunately, history
 
 Welby darts down the chimney before they attack, using the rope more as a sliding pole than a grip. Just after landing on the ground the rope begins sliding up the chute, being pulled from above. Erdrick grabs the remaining slack and yanks it with all his might. "Yeeee Ahhhhhhhhh Ohhhh!!!" howls a goblins as it bounces through the chute, banging its body on the ground with a solid thump. 
 
-Even though yelling and activity continues above, the rope now remains still.
+Even though the yelling and activity continues above, the rope now remains still.
 
 
 
