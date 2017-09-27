@@ -16,7 +16,7 @@ For centuries, rumors of buried riches have attracted treasure seekers and oppor
 
 _Here lies actual accounts of fictional events. Spoilers exists if you haven't yet played this adventure._
 
-{% assign posts = site.tags['lost-mine-of-phadelver-campaign' | sort: 'part_number'] %}
+{% assign posts = site.tags['lost-mine-of-phadelver-campaign'] | sort: 'part_number' %}
 
 {% for post in posts %}* Part {{ post.part_number }}: [{{ post.title }}]({{ post.url }})
 {% endfor %}
