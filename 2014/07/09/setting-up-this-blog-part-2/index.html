@@ -82,7 +82,7 @@
 
 <h4 id="git">Git</h4>
 
-<p><a href="https://pages.github.com">GitHub Pages has great documentation available</a>, but it wasn’t a silver bullet. GitHub Pages requires at least two branches: One to host the blog itself and one to store the source code for generating the blog. GitHub Pages respects a magical branch called <em>gh-pages</em> or the <em>master</em> branch. I chose to go with <em>master</em> for hosting and <em>source</em> for the source code. Admittedly, I didn’t get this right at first (or second, third, or tenth). </p>
+<p><a href="https://pages.github.com">GitHub Pages has great documentation available</a>, but it wasn’t a silver bullet. GitHub Pages requires at least two branches: One to host the blog itself and one to store the source code for generating the blog. GitHub Pages respects a magical branch called <em>gh-pages</em> or the <em>master</em> branch. I chose to go with <em>master</em> for hosting and <em>source</em> for the source code. Admittedly, I didn’t get this right at first (or second, third, or tenth).</p>
 
 <p>Since I already had some source code in the <em>master</em> branch, I needed to change things around. I created a new branch for the source code:</p>
 
@@ -95,7 +95,7 @@
 git commit -m "insert kewl comment here"
 </code></pre>
 
-<p>Now I have a clean <em>master</em> and a fully loaded <em>source</em>. I’ll never do anything directly in the <em>master</em> branch. Everything will be done in <em>source</em>, then deployed (<strong>NOT</strong> merged!) to <em>master</em>. These two branches will never merge together again. </p>
+<p>Now I have a clean <em>master</em> and a fully loaded <em>source</em>. I’ll never do anything directly in the <em>master</em> branch. Everything will be done in <em>source</em>, then deployed (<strong>NOT</strong> merged!) to <em>master</em>. These two branches will never merge together again.</p>
 
 <h4 id="writing">Writing</h4>
 
@@ -103,7 +103,7 @@ git commit -m "insert kewl comment here"
 
 <h4 id="previewing">Previewing</h4>
 
-<p>As mentioned above, Markdown Preview offers some nice Markdown enhancements- including previewing via your browser. While I do use this feature when writing notes or other Markdown based documents, this blog is previewed via Jekyll for an identical match to the final product. </p>
+<p>As mentioned above, Markdown Preview offers some nice Markdown enhancements- including previewing via your browser. While I do use this feature when writing notes or other Markdown based documents, this blog is previewed via Jekyll for an identical match to the final product.</p>
 
 <p>To setup a local copy of the blog at <em>http://localhost:4000</em> and automatically update modified files for real-time previewing, I use this command line from my <em>source</em> branch:</p>
 

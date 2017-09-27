@@ -85,7 +85,7 @@
 
 <p>In a nutshell- an interface is a set of rules. It regulates its consumer by enforcing that certain methods, delegates, and/or events must be defined. Clear as mud, right? Let’s try an example, followed by a bad car analogy if you’re not so lucky.</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Define an interface to &quot;do something&quot;</span>
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span></span>    <span class="c1">// Define an interface to &quot;do something&quot;</span>
     <span class="k">interface</span> <span class="n">IFooCanUseMeNow</span>
     <span class="p">{</span>
       <span class="k">void</span> <span class="nf">DoSomething</span><span class="p">();</span>
@@ -133,7 +133,7 @@
       <span class="p">{</span>
         <span class="c1">// maybe cut some hair</span>
       <span class="p">}</span>
-    <span class="p">}</span></code></pre></div>
+    <span class="p">}</span></code></pre></figure>
 
 <p>In case the comments weren’t enough, let me explain this example in depth. The class, Foo, desires only one thing: “to do interesting things”. Its entire purpose in life is to perform “interesting things”, regardless of what they are, who they’re from, what side-effects they have, how to do them, etc… Foo simply doesn’t care about the details. This is accomplished via the interface IFooCanUseMeNow.</p>
 
@@ -143,7 +143,7 @@
 
 <p>In case you’re completely lost, here’s a brief example of how these classes could interact:</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">ExampleOfUse_WithInterface</span>
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span></span>    <span class="k">class</span> <span class="nc">ExampleOfUse_WithInterface</span>
     <span class="p">{</span>
       <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
       <span class="p">{</span>
@@ -160,11 +160,11 @@
         <span class="n">foo</span><span class="p">.</span><span class="n">DoSomething</span><span class="p">(</span><span class="n">bartender</span><span class="p">);</span> <span class="c1">// serve beers</span>
         <span class="n">foo</span><span class="p">.</span><span class="n">DoSomething</span><span class="p">(</span><span class="n">barber</span><span class="p">);</span> <span class="c1">// cut hair</span>
       <span class="p">}</span>
-    <span class="p">}</span></code></pre></div>
+    <span class="p">}</span></code></pre></figure>
 
 <p>Now the big question: “Why didn’t you just do this by inheriting a class?”. Here’s the exact same situation, but using an abstract class instead of an interface:</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">ExampleOfUse_WithClass</span>
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span></span>    <span class="k">class</span> <span class="nc">ExampleOfUse_WithClass</span>
     <span class="p">{</span>
       <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
       <span class="p">{</span>
@@ -218,13 +218,13 @@
     <span class="k">class</span> <span class="nc">Barber</span> <span class="p">:</span> <span class="n">FooCanUseMeNow</span>
     <span class="p">{</span>
       <span class="k">override</span> <span class="k">public</span> <span class="k">void</span> <span class="nf">DoSomething</span><span class="p">()</span>  <span class="p">{</span> <span class="p">}</span>
-    <span class="p">}</span></code></pre></div>
+    <span class="p">}</span></code></pre></figure>
 
 <p>As you can see, the code is very similar. The class version has a few more details (abstract, virtual, override), but it’s mostly the same code. The Main method that performs all of the work is actually exactly the same. So what’s the problem with using a class instead of an interface?</p>
 
 <p>In such a simple example as this, the lines between a class and interface are a little blurry- they both work, with little reason to choose one over the other. But imagine a slightly more complicated example, where each of our “interesting classes” inherit from a base class:</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">Bar</span> <span class="p">:</span> <span class="n">CounterTop</span><span class="p">,</span> <span class="n">IFooCanUseMeNow</span>
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span></span>    <span class="k">class</span> <span class="nc">Bar</span> <span class="p">:</span> <span class="n">CounterTop</span><span class="p">,</span> <span class="n">IFooCanUseMeNow</span>
     <span class="p">{</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">DoSomething</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
     <span class="p">}</span>
@@ -247,7 +247,7 @@
     <span class="k">abstract</span> <span class="k">class</span> <span class="nc">Person</span> 
     <span class="p">{</span>
       <span class="c1">// base for all people</span>
-    <span class="p">}</span></code></pre></div>
+    <span class="p">}</span></code></pre></figure>
 
 <p>In this example, it should be more apparent why using a class is not a good approach. Remember, C# allows as many interfaces as needed to be implemented but only allows one class to be inherited. With this more complex example, each of the “interesting classes” already inherit their base class, so they wouldn’t be able to inherit the FooCanUseMeNow class. Of course, you could have the low level abstract classes inherit FooCanUseMeNow, but that’s more or less hacking out a solution (just because Bartender and Barber can DoSomething, it doesn’t mean that some other Person can as well).</p>
 

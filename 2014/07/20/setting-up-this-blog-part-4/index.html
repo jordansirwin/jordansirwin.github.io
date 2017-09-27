@@ -89,7 +89,7 @@
   <li>Compile LESS into CSS</li>
   <li>Compile into website via Jekyll</li>
   <li>Checkout <em>master</em></li>
-  <li>Remove previous files from <em>master</em> </li>
+  <li>Remove previous files from <em>master</em></li>
   <li>Copy compiled website from <em>source</em> to <em>master</em></li>
   <li>Commit <em>master</em></li>
   <li>Push <em>master</em> to GitHub</li>
@@ -113,7 +113,7 @@
 
 <p><img src="/content/posts/2014-07-20-setting-up-this-blog-part-4/branch_folders.jpg" alt="Branch Folders" /></p>
 
-<p>This also solved another problem I was struggling with: Cleaning up the <em>master</em> branch of old files. I couldn’t find a satisfying way to remove existing files from the <em>master</em> branch without removing important things like .git, .gitignore, etc… While likely not the best solution, here’s the command I came up with for cleaning up (it’s executed from the <em>source</em> branch folder, hence the pathing): </p>
+<p>This also solved another problem I was struggling with: Cleaning up the <em>master</em> branch of old files. I couldn’t find a satisfying way to remove existing files from the <em>master</em> branch without removing important things like .git, .gitignore, etc… While likely not the best solution, here’s the command I came up with for cleaning up (it’s executed from the <em>source</em> branch folder, hence the pathing):</p>
 
 <pre><code>find ../../master -regex ".*/master/[^.].*" -exec rm -rf {} \;
 </code></pre>
