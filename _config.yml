@@ -1,11 +1,13 @@
 # site settings
 author: "Jordan Irwin"
-baseurl: 
+repository: jordansirwin/jordansirwin.github.io.git
+# baseurl:
 self-css: self.min.css
 description: "Thoughts, rants, tips, tricks, stories, truths, and lies."
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
-name: "JordanIrwin.net"
+# name: "JordanIrwin.net"
+title: "JordanIrwin.net"
 url: http://www.jordanirwin.net
 useAnalytics: true
 
