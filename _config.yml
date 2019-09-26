@@ -13,6 +13,7 @@ useAnalytics: true
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-github-metadata
 
 # meta tag for "keywords"
 keywords:
