@@ -1,0 +1,50 @@
+# site settings
+author: "Jordan Irwin"
+repository: jordansirwin/jordansirwin.github.io.git
+# baseurl:
+self-css: self.min.css
+description: "Thoughts, rants, tips, tricks, stories, truths, and lies."
+highlighter: rouge
+permalink: pretty
+# name: "JordanIrwin.net"
+title: "JordanIrwin.net"
+url: http://www.jordanirwin.net
+useAnalytics: true
+
+plugins:
+  - jekyll-redirect-from
+
+# meta tag for "keywords"
+keywords:
+  - geek
+  - roleplay
+  - technology
+  - programming
+  - c#
+  - video game
+  - gaming
+
+# navigation links
+navigation:
+- text: Latest
+  url: /
+- text: Everything
+  url: /archives/
+- text: About
+  url: /about/
+- text: Feed
+  url: /feed.xml
+
+# default settings
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

@@ -1,0 +1,124 @@
+
+@container-sm:                 @container-tablet;
+@container-md:                 @container-tablet;
+@container-lg:                 @container-tablet;
+
+
+
+// Scaffold
+@body-bg:               #47443D;
+@text-color:            #DEDBD1;
+
+@link-color:            #F7F7A3;
+@link-hover-color:      darken(@link-color, 25%);
+@nav-link-hover-bg:     #847E6F;
+
+@well-bg:               #3B342E;
+
+
+@font-family-monospace: "Lucida Console", Monaco, Consolas, monospace;
+@font-family-base:      @font-family-monospace;
+@font-size-base:          13px;
+
+@blockquote-font-size:    @font-size-base;
+@font-size-h1:            floor((@font-size-base * 2.5)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.0)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.5)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.20)); // ~18px
+@font-size-h5:            ceil((@font-size-base * 1.00));
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+
+// other things
+body {
+  //font-family: "Lucida Console", Monaco, monospace !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+// remove underscore from links
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+strong {
+  color: lighten(@text-color, 10%);
+}
+
+// content block has some height in case it's tiny or empty
+.content {
+  margin-top: 10px;
+  min-height: 100px;
+}
+
+// makes navigation justified
+.navbar-nav.nav-justified > li {
+    float: none;
+}
+
+.responsive-col {
+  .make-xs-column(12);
+  .make-xs-column-offset(0);
+
+  .make-sm-column(10);
+  .make-sm-column-offset(1);
+}
+
+.latest-posts {
+  .post:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+// style our posts
+.post {
+  h3 {
+    color: lighten(@text-color, 15%);
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  h4 {
+    border-top: 1px dashed darken(@text-color, 40%);
+    color: lighten(@text-color, 15%);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    //display: inline;
+
+ /* can't get this to look good, but close...
+    &:before {
+      content: "";
+      border-top: 1px dashed darken(@text-color, 40%);
+      display: inline-block;
+      margin-bottom: 3px;
+      //margin-left: auto;
+      //margin-right: auto;
+      width:100%;
+    }
+    */
+  }
+  h5 {
+    color: lighten(@text-color, 15%);
+    margin-top: 30px;
+    //margin-bottom: -10px;
+  }
+  img {   
+    display: block;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    max-width: 100%;
+  }
+  p {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  ul, ol {
+    //margin-top: 5px;
+    //margin-bottom: 5px;
+  }
+}
+

@@ -1,0 +1,12 @@
+---
+---
+
+<div class="latest-posts">
+  {% for post in site.posts limit: 5 %}
+      <div class="post well">
+        <small>{{ post.date | date: "%B %-d, %Y"}}</small>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {{ post.content }}
+      </div>
+  {% endfor %}
+</div>
