@@ -1,4 +1,8 @@
-Setting up this blog
+---
+title: Setting up this blog
+---
+
+
 
 * Deployment
   * 2 folders, 1 per branch

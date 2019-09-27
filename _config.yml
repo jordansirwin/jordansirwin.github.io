@@ -3,7 +3,7 @@ author: "Jordan Irwin"
 repository: jordansirwin/jordansirwin.github.io.git
 # baseurl:
 self-css: self.min.css
-description: "Thoughts, rants, tips, tricks, stories, truths, and lies."
+description: "The thoughts, rants, tips, tricks, stories, truths, and lies of Jordan Irwin"
 highlighter: rouge
 permalink: pretty
 # name: "JordanIrwin.net"
@@ -21,8 +21,7 @@ keywords:
   - roleplay
   - technology
   - programming
-  - c#
-  - video game
+  - video games
   - gaming
 
 # navigation links
@@ -52,3 +51,6 @@ defaults:
 
 exclude:
   - Makefile
+  - README.md
+  - GemFile
+  - GemFile.lock
