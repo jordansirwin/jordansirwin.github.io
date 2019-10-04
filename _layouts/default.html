@@ -72,18 +72,6 @@
       </div>
 
       <div class="row">
-        <div class="responsive-col">
-          <ul class="nav navbar-nav nav-justified" role="navigation">
-            {% for link in site.navigation %}
-            <li>
-                <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-
-      <div class="row">
         <div class="content responsive-col">
           {{ content }}
         </div>
