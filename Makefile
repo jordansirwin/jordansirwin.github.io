@@ -1,3 +1,4 @@
+.DEFAULT_GOAL := run
 
 # Build everything, but doesn't serve
 build:
